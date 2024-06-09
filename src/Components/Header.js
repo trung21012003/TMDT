@@ -4,6 +4,7 @@ import './assets/css/owl.css';
 import './assets/css/animate.css';
 import './assets/css/flex-slider.css';
 import './assets/css/templatemo-cyborg-gaming.css';
+import {Link} from 'react-router-dom';
 
 export default function header() {
 
@@ -15,11 +16,9 @@ export default function header() {
                     <div className="row">
                         <div className="col-12">
                             <nav className="main-nav">
-
-                                <a href="index.html" className="logo">
+                                <Link to="/" className="logo">
                                     <img src={logo} alt="Logo"/>
-                                </a>
-
+                                </Link>
                                 <div className="search-input">
                                     <form id="search" action="#">
                                         <input type="text" placeholder="Type Something" id='searchText'
@@ -30,7 +29,7 @@ export default function header() {
                                 </div>
 
                                 <ul className="nav">
-                                    <li><a href="index.html" className="active">Home</a></li>
+                                    <li><Link to="/" className="active">Home</Link></li>
                                     <li><a href="browse.html">Browse</a></li>
                                     <li><a href="details.html">Details</a></li>
                                     <li><a href="streams.html">Streams</a></li>
