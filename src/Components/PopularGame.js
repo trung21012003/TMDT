@@ -4,6 +4,8 @@ import React from "react";
 export default function PopularGame() {
     const products = useSelector((state) => state.products);
     console.log(products);
+    const users = useSelector((state) => state.users );
+    console.log(users);
     return (
         <div className="most-popular">
             <div className="row">

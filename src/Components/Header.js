@@ -1,12 +1,18 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import React, {useState} from "react";
 import logo  from './assets/images/logo.png';
 import './assets/css/owl.css';
 import './assets/css/animate.css';
 import './assets/css/flex-slider.css';
 import './assets/css/templatemo-cyborg-gaming.css';
 import {Link} from 'react-router-dom';
+import { useSelector } from "react-redux";
 
+import BtnLogin from "./BtnLogin";
 export default function header() {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const { isLoggedIn } = useSelector((state) => state.auth.isLoggedIn);
+
 
     return (
 
@@ -33,9 +39,9 @@ export default function header() {
                                     <li><a href="browse.html">Browse</a></li>
                                     <li><a href="details.html">Details</a></li>
                                     <li><a href="streams.html">Streams</a></li>
-                                    <li><a href="profile.html">Profile <img src="assets/images/profile-header.jpg"
-                                                                            alt=""/></a>
-                                    </li>
+                                    <BtnLogin />
+
+
                                 </ul>
                                 <a className='menu-trigger'>
                                     <span>Menu</span>

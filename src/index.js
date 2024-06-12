@@ -4,21 +4,19 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux";
-import {configureStore} from "@reduxjs/toolkit";
-import ProductReducer from "./Reducers/ProductReducer";
 
-const store = configureStore( {
-    reducer: {
-        //product
-        products: ProductReducer
-    }
-});
+import {persistor, store} from "./store";
+import {PersistGate} from "redux-persist/integration/react";
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
       <Provider store={store} >
-          <App />
+          <PersistGate persistor={persistor} >
+            <App />
+          </PersistGate>
       </Provider>
 
   </React.StrictMode>
