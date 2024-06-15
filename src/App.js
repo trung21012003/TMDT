@@ -4,6 +4,9 @@ import {BrowserRouter, Router, Route, Routes} from "react-router-dom";
 import Test from "./Components/Test";
 import SignUp from "./Components/SignUp";
 import Login from "./Components/Login";
+import Browse from "./Components/Browse";
+
+
 function App() {
   return (
 
@@ -14,6 +17,7 @@ function App() {
                   <Route path="/test" element={<Test />} />
                   <Route path="/signUp" element={<SignUp /> } />
                   <Route path="/login" element={<Login />} />
+                  <Route path="/browse" element={<Browse />} />
               </Routes>
 
           </BrowserRouter>

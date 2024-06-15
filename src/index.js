@@ -7,6 +7,7 @@ import {Provider} from "react-redux";
 
 import {persistor, store} from "./store";
 import {PersistGate} from "redux-persist/integration/react";
+import 'font-awesome/css/font-awesome.min.css';
 
 
 
