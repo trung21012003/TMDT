@@ -36,7 +36,7 @@ export default function header() {
 
                                 <ul className="nav">
                                     <li><Link to="/" className="active">Home</Link></li>
-                                    <li><a href="browse.html">Browse</a></li>
+                                    <li><a href="browse">Browse</a></li>
                                     <li><a href="details.html">Details</a></li>
                                     <li><a href="streams.html">Streams</a></li>
                                     <BtnLogin />

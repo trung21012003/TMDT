@@ -30,7 +30,8 @@ export default function Login() {
             navigate("/login");
 
 
-         }
+
+        }
 
     }
     return (
@@ -44,9 +45,9 @@ export default function Login() {
                     type="text" className={styles.input}
                     placeholder="Email"
                     {...register("email", {required: "This field is required ", pattern:{
-                        value: /^\S+@\S+$/i ,
-                        message: "Invalid email address"
-                    }})}
+                            value: /^\S+@\S+$/i ,
+                            message: "Invalid email address"
+                        }})}
                 />
                 {errors.email && <span className={styles.span}>{errors.email.message}</span>}
                 <input type="password"
