@@ -30,7 +30,6 @@ export default function Login() {
             navigate("/login");
 
 
-
         }
 
     }
@@ -54,7 +53,6 @@ export default function Login() {
                        className={styles.input} placeholder="Password"
                        {...register("password", {
                            required: "This field is required " ,
-
                        })} />
                 {errors.password && <span className={styles.span}>{errors.password.message}</span>}
                 <br />

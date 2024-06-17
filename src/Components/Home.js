@@ -1,5 +1,7 @@
 import PopularGame from "./PopularGame";
 import Header from "./Header";
+import Footer from "./Footer";
+import LibraryGame from "./LibraryGame";
 export default function Home() {
     return (
         <div className="container">
@@ -15,19 +17,19 @@ export default function Home() {
                                             <h6>Welcome To Cyborg</h6>
                                             <h4><em>Browse</em> Our Popular Games Here</h4>
                                             <div className="main-button">
-                                                <a href="browse.html">Browse Now</a>
+                                                <a href="browse">Browse Now</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <PopularGame/>
+                            <LibraryGame />
                         </div>
-                        <PopularGame/>
-
                     </div>
                 </div>
             </div>
-
+            <Footer />
         </div>
 
     )
