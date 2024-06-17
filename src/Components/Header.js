@@ -9,13 +9,12 @@ import {Link} from 'react-router-dom';
 import { useSelector } from "react-redux";
 
 import BtnLogin from "./BtnLogin";
-export default function header() {
+export default function Header() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const { isLoggedIn } = useSelector((state) => state.auth.isLoggedIn);
 
 
     return (
-
         <div className="col-12">
             <header className="header-area header-sticky">
                 <div className="container">
@@ -37,8 +36,8 @@ export default function header() {
                                 <ul className="nav">
                                     <li><Link to="/" className="active">Home</Link></li>
                                     <li><a href="browse">Browse</a></li>
-                                    <li><a href="details.html">Details</a></li>
-                                    <li><a href="streams.html">Streams</a></li>
+                                    <li><a href="details">Details</a></li>
+                                    <li><a href="streams">Streams</a></li>
                                     <BtnLogin />
 
 

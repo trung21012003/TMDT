@@ -1024,9 +1024,9 @@ Featured Games Style
 }
 
 .featured-games .item ul li {
-    text-align: right;
     color: #fff;
     font-size: 14px;
+    margin-left: -80px;
 }
 
 .featured-games .item ul li:first-child i {

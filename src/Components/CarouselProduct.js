@@ -9,12 +9,14 @@ export default function CarouselProduct() {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        autoplay:true,
+        autoplaySpeed : 2000,
     };
     return (
         <Slider {...settings}>
             <div className="item">
                 <div className="thumb">
-                    <img style={{width:"233px",height:"378px"}} src={require("./assets/images/featured-01.jpg")} alt=""/>
+                    <img style={{width:"220px",height:"378px"}} src={require("./assets/images/featured-01.jpg")} alt=""/>
                     <div className="hover-effect">
                         <h6>2.4K Streaming</h6>
                     </div>
@@ -27,7 +29,7 @@ export default function CarouselProduct() {
             </div>
             <div className="item" style={{marginLeft:"10px"}}>
                 <div className="thumb">
-                    <img style={{width:"233px",height:"378px"}} src={require("./assets/images/featured-02.jpg")} alt=""/>
+                    <img style={{width:"220px",height:"378px"}} src={require("./assets/images/featured-02.jpg")} alt=""/>
                     <div className="hover-effect">
                         <h6>2.4K Streaming</h6>
                     </div>
@@ -38,9 +40,9 @@ export default function CarouselProduct() {
                     <li><i className="fa fa-download"></i> 2.3M</li>
                 </ul>
             </div>
-            <div className="item">
+            <div className="item" >
                 <div className="thumb">
-                    <img style={{width:"233px",height:"378px"}} src={require("./assets/images/featured-03.jpg")} alt=""/>
+                    <img style={{width:"220px",height:"378px"}} src={require("./assets/images/featured-03.jpg")} alt=""/>
                     <div className="hover-effect">
                         <h6>2.4K Streaming</h6>
                     </div>

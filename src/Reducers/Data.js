@@ -15,7 +15,6 @@ export const  productList = [
         id: "2",
         image: "popular-02.jpg",
         price: "5$",
-
         bought: "10M"
     },
     {
@@ -41,5 +40,13 @@ export const  productList = [
         image: "popular-05.jpg",
         price: "48$",
         bought: "1M"
+    },
+    {
+        name:"Game Pikachu",
+        type:"Sandbox",
+        id: "6",
+        price: "5.8$",
+        image: "popular-01.jpg",
+        bought: "5M"
     },
 ]
