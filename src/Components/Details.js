@@ -2,8 +2,17 @@ import React from "react";
 import 'font-awesome/css/font-awesome.min.css';
 import Header from "./Header";
 import Footer from "./Footer";
+import {useParams} from "react-router-dom";
+import {useSelector} from "react-redux";
 
 export default function Details(){
+    const {id} = useParams();
+    console.log(id);
+    const products = useSelector((state) => state.products);
+    console.log(products);
+    const existingProduct = products.filter(f => f.id == id);
+    const product = existingProduct[0];
+    console.log(product);
     return(
         <>
         <div className="container">
@@ -16,11 +25,11 @@ export default function Details(){
                                 <div className="feature-banner header-text">
                                     <div className="row">
                                         <div className="col-lg-4">
-                                            <img src={require("./assets/images/feature-left.jpg")} alt="" style={{borderRadius: "23px"}} />;
+                                            <img src={require(`./assets/images/${product.image1}`)}  style={{borderRadius: "23px"}} />;
                                         </div>
                                         <div className="col-lg-8">
                                             <div className="thumb">
-                                                <img src={require("./assets/images/feature-right.jpg")} alt="" style={{borderRadius: "23px"}} />
+                                                <img src={require(`./assets/images/${product.image2}`)} style={{borderRadius: "23px"}} />
                                                     <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank">
                                                         <i className="fa fa-play"></i>
                                                     </a>
@@ -33,7 +42,7 @@ export default function Details(){
                         <div className="game-details">
                             <div className="row">
                                 <div className="col-lg-12">
-                                    <h2>Fortnite Details</h2>
+                                    <h2>{product.name} Details</h2>
                                 </div>
                                 <div className="col-lg-12">
                                     <div className="content">
@@ -61,16 +70,16 @@ export default function Details(){
                                                 </div>
                                             </div>
                                             <div className="col-lg-4">
-                                                <img src={require("./assets/images/details-01.jpg")} alt="" style={{borderRadius: "23px", marginBottom: "30px"}} />
+                                                <img src={require(`./assets/images/${product.image3}`)} alt="" style={{borderRadius: "23px", marginBottom: "30px"}} />
                                             </div>
                                             <div className="col-lg-4">
-                                                <img src={require("./assets/images/details-02.jpg")} alt="" style={{borderRadius: "23px", marginBottom: "30px"}} />
+                                                <img src={require(`./assets/images/${product.image4}`)} alt="" style={{borderRadius: "23px", marginBottom: "30px"}} />
                                             </div>
                                             <div className="col-lg-4">
-                                                <img src={require("./assets/images/details-03.jpg")} alt="" style={{borderRadius: "23px", marginBottom: "30px"}} />
+                                                <img src={require(`./assets/images/${product.image5}`)} alt="" style={{borderRadius: "23px", marginBottom: "30px"}} />
                                             </div>
                                             <div className="col-lg-12">
-                                                <p>Cyborg Gaming is free HTML CSS website template provided by TemplateMo. This is Bootstrap v5.2.0 layout. You can make a <a href="https://paypal.me/templatemo" target="_blank">small contribution via PayPal</a> to info [at] templatemo.com and thank you for supporting. If you want to get the PSD source files, please contact us. Lorem ipsum dolor sit consectetur es dispic dipiscingei elit, sed doers eiusmod lisum hored tempor.</p>
+                                                <p>{product.description}</p>
                                             </div>
                                             <div className="col-lg-12">
                                                 <div className="main-border-button">

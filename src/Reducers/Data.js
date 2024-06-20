@@ -4,23 +4,36 @@ export const  productList = [
     {
         name:"Fortnite",
         type:"Sandbox",
-        id: "1",
+        id: 1,
         price: "4.8$",
         image: "popular-01.jpg",
+        image1: "feature-left.jpg",
+        image2: "feature-right.jpg",
+        image3: "details-01.jpg",
+        image4: "details-02.jpg",
+        image5: "details-03.jpg",
+        description: "Fornite là một tựa game không còn quá xa lạ với các fan của Fornite. Game thuộc thể loại battle royale kết hợp cách chơi xây dựng mới lạ và hấp dẫn chắc chắn sẽ thu hút đông đảo người chơi.",
         bought: "5M"
     },
     {
         name:"PubG",
         type:"Battle S",
-        id: "2",
+        id: 2,
         image: "popular-02.jpg",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: "5$",
         bought: "10M"
     },
     {
         name:"Dota2",
         type:"Steam-X",
-        id: "3",
+        id: 3,
         image: "popular-03.jpg",
         price: "48$",
         bought: "2.3M"
@@ -28,7 +41,7 @@ export const  productList = [
     {
         name:"CS-GO",
         type:"Steam-X",
-        id: "4",
+        id: 4,
         image: "popular-04.jpg",
         price: "48$",
         bought: "2.3M"
@@ -36,7 +49,7 @@ export const  productList = [
     {
         name:"Mini Craft",
         type:"Matrix Games",
-        id: "5",
+        id: 5,
         image: "popular-05.jpg",
         price: "48$",
         bought: "1M"
@@ -44,7 +57,7 @@ export const  productList = [
     {
         name:"Game Pikachu",
         type:"Sandbox",
-        id: "6",
+        id: 6,
         price: "5.8$",
         image: "popular-01.jpg",
         bought: "5M"

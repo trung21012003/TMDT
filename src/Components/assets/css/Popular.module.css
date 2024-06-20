@@ -1,0 +1,11 @@
+#item{
+    cursor: pointer;
+
+}
+#item:hover{
+    background-color: #5c636a;
+
+}
+#item:hover .name {
+    color: white;
+}
