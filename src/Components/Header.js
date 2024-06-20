@@ -44,9 +44,8 @@ export default function Header() {
 
                                 <ul className="nav">
                                     <li><Link to="/" className="active">{t("home")}</Link></li>
-                                    <li><a href="browse">Browse</a></li>
-                                    <li><a href="details">Details</a></li>
-                                    <li><a href="streams">Streams</a></li>
+                                    <li><Link to="/browse" className="active">Browe</Link></li>
+                                    <li><Link to="/streams" className="active">Streams</Link></li>
                                     <li>
                                         <div className="language">
                                             <select style={{backgroundColor:"#666"}} className="chooseLanguage" onChange={(e) => changeLanguage(e.target.value)}>
