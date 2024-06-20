@@ -10,6 +10,7 @@ export default function CarouselProduct() {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay:true,
+        arrows:false,
         autoplaySpeed : 2000,
     };
     return (

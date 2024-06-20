@@ -13,11 +13,13 @@ export default function BtnLogin() {
     }
     if(!isLoggedIn) {
         return (
+
             <li><Link to="/login">Đăng Nhập <img src={logoProfile}
                                                       alt=""/></Link>
             </li>
+
         )
-    }else {
+    } else {
         return (
             <li> <button className="btn  btn-danger" onClick={handleLogOut} >Đăng Xuất <img src="assets/images/profile-header.jpg"
                                                       alt=""/></button>

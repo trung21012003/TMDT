@@ -7,7 +7,7 @@ import Login from "./Components/Login";
 import Browse from "./Components/Browse";
 import Details from "./Components/Details";
 import Stream from "./Components/Stream";
-
+import "./Components/i18n/i18n"
 
 function App() {
   return (
