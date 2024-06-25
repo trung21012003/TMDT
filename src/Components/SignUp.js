@@ -59,7 +59,7 @@ export default function SignUp() {
                                 <div className="col-md-3">
                                     <label htmlFor="inputPassword4" className="form-label">Confirm Password</label>
                                     <input type="password" className="form-control" id="inputPassword4"
-                                           />
+                                    />
                                 </div>
                                 <div className="col-6">
                                     <label htmlFor="inputAddress" className="form-label">Address</label>
@@ -97,12 +97,7 @@ export default function SignUp() {
                                         </label>
                                     </div>
                                 </div>
-
-
                                 <button type="submit" className="btn btn-primary col-12">Submit</button>
-
-
-
                             </form>
                         </div>
                     </div>

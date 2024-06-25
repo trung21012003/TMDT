@@ -8,6 +8,7 @@ import Browse from "./Components/Browse";
 import Details from "./Components/Details";
 import Stream from "./Components/Stream";
 import "./Components/i18n/i18n"
+import Game from "./Components/Game";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
                   <Route path="/browse" element={<Browse />} />
                   <Route path="/details/:id" element={<Details />} />
                   <Route  path="/streams" element={<Stream /> } />
+                  <Route path="/game" element={<Game />} />
               </Routes>
 
           </BrowserRouter>
