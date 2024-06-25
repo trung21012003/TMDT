@@ -5,7 +5,7 @@ import './assets/css/owl.css';
 import './assets/css/animate.css';
 import './assets/css/flex-slider.css';
 import './assets/css/templatemo-cyborg-gaming.css';
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import {useSelector} from "react-redux";
 
 import BtnLogin from "./BtnLogin";
@@ -13,6 +13,8 @@ import {useTranslation} from "react-i18next";
 
 
 export default function Header() {
+    const location = useLocation();
+    const currentPath = location.pathname;
     const {isLoggedIn} = useSelector((state) => state.auth.isLoggedIn);
     const {i18n} = useTranslation()
     const {t} =useTranslation()
@@ -43,10 +45,10 @@ export default function Header() {
                                 </div>
 
                                 <ul className="nav">
-                                    <li><Link to="/" className="active">{t("home")}</Link></li>
-                                    <li><Link to="/browse" className="active">Browe</Link></li>
-                                    <li><Link to="/streams" className="active">Streams</Link></li>
-                                    <li><Link to="/game" className="active">Game</Link></li>
+                                    <li><Link to="/" className={currentPath === '/' ? 'active' : ''}>{t("home")}</Link></li>
+                                    <li><Link to="/browse" className={currentPath === '/browse' ? 'active' : ''}>Browe</Link></li>
+                                    <li><Link to="/streams" className={currentPath === '/streams' ? 'active' : ''}>Streams</Link></li>
+                                    <li><Link to="/games" className={currentPath === '/games' ? 'active' : ''}>Games</Link></li>
                                     <li>
                                         <div className="language">
                                             <select style={{backgroundColor: "#666"}} className="chooseLanguage"

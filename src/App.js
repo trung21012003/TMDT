@@ -23,7 +23,7 @@ function App() {
                   <Route path="/browse" element={<Browse />} />
                   <Route path="/details/:id" element={<Details />} />
                   <Route  path="/streams" element={<Stream /> } />
-                  <Route path="/game" element={<Game />} />
+                  <Route path="/games" element={<Game />} />
               </Routes>
 
           </BrowserRouter>
