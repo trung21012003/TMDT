@@ -39,6 +39,55 @@ export const  productList = [
         bought: "2.3M"
     },
     {
+        name:"Dota3",
+        type:"Steam-X",
+        id: 7,
+        image: "popular-03.jpg",
+        price: "48$",
+        bought: "2.3M"
+    },
+    {
+        name:"Dota4",
+        type:"Steam-X",
+        id: 8,
+        image: "popular-03.jpg",
+        price: "48$",
+        bought: "2.3M"
+    },
+    {
+        name:"Dota5",
+        type:"Steam-X",
+        id: 9,
+        image: "popular-03.jpg",
+        price: "48$",
+        bought: "2.3M"
+    },
+    {
+        name:"Dota6",
+        type:"Steam-X",
+        id: 10,
+        image: "popular-03.jpg",
+        price: "48$",
+        bought: "2.3M"
+    },
+    {
+        name:"Dota7",
+        type:"Steam-X",
+        id: 11,
+        image: "popular-03.jpg",
+        price: "48$",
+        bought: "2.3M"
+    },
+    {
+        name:"Dota8",
+        type:"Steam-X",
+        id: 12,
+        image: "popular-03.jpg",
+        price: "48$",
+        bought: "2.3M"
+    },
+
+    {
         name:"CS-GO",
         type:"Steam-X",
         id: 4,
@@ -61,5 +110,21 @@ export const  productList = [
         price: "5.8$",
         image: "popular-01.jpg",
         bought: "5M"
+    },
+    {
+        name:"Doraemon",
+        type:"Steam-X",
+        id: 13,
+        image: "popular-03.jpg",
+        price: "50$",
+        bought: "5.3M"
+    },
+    {
+        name:"Connan",
+        type:"Steam-X",
+        id: 14,
+        image: "popular-03.jpg",
+        price: "50$",
+        bought: "5.3M"
     },
 ]

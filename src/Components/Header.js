@@ -46,9 +46,11 @@ export default function Header() {
                                     <li><Link to="/" className="active">{t("home")}</Link></li>
                                     <li><Link to="/browse" className="active">Browe</Link></li>
                                     <li><Link to="/streams" className="active">Streams</Link></li>
+                                    <li><Link to="/game" className="active">Game</Link></li>
                                     <li>
                                         <div className="language">
-                                            <select style={{backgroundColor:"#666"}} className="chooseLanguage" onChange={(e) => changeLanguage(e.target.value)}>
+                                            <select style={{backgroundColor: "#666"}} className="chooseLanguage"
+                                                    onChange={(e) => changeLanguage(e.target.value)}>
                                                 <option value="vi" className="language-vi">
                                                     Tiếng Việt
                                                 </option>
@@ -62,7 +64,7 @@ export default function Header() {
                                     <BtnLogin/>
                                 </ul>
                                 <a className='menu-trigger'>
-                                    <span>Menu</span>
+                                <span>Menu</span>
                                 </a>
 
                             </nav>

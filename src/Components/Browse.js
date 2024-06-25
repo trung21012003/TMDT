@@ -10,7 +10,6 @@ import LiveStream from "./LiveStream";
 export default function  Browse () {
     return (
         <>
-
             <div className="container">
                 <Header />
                 <div className="row">

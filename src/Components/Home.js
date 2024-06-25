@@ -23,13 +23,22 @@ export default function Home() {
                                     </div>
                                 </div>
                             </div>
-                            <PopularGame/>
-                            <LibraryGame />
+                            <div className="most-popular">
+                                <div className="row">
+                                    <div className="col-lg-12">
+                                        <div className="heading-section">
+                                            <h4><em>Most Popular</em> Right Now</h4>
+                                        </div>
+                                        <PopularGame/>
+                                    </div>
+                                </div>
+                            </div>
+                            <LibraryGame/>
                         </div>
                     </div>
                 </div>
             </div>
-            <Footer />
+            <Footer/>
         </div>
 
     )
