@@ -1,7 +1,7 @@
 import styles from './module/login.module.css'
-import {useState} from "react";
+import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import {login} from "../Reducers/AuthReducer";
 
@@ -43,20 +43,27 @@ export default function Login() {
                 <input
                     type="text" className={styles.input}
                     placeholder="Email"
-                    {...register("email", {required: "This field is required ", pattern:{
-                            value: /^\S+@\S+$/i ,
+                    {...register("email", {
+                        required: "This field is required ", pattern: {
+                            value: /^\S+@\S+$/i,
                             message: "Invalid email address"
-                        }})}
+                        }
+                    })}
                 />
                 {errors.email && <span className={styles.span}>{errors.email.message}</span>}
                 <input type="password"
                        className={styles.input} placeholder="Password"
                        {...register("password", {
-                           required: "This field is required " ,
+                           required: "This field is required ",
                        })} />
                 {errors.password && <span className={styles.span}>{errors.password.message}</span>}
-                <br />
-                <button type="submit" className="btn btn-primary btn-block btn-large">Đăng nhập</button>
+                <br/>
+                <button type="submit" className="btn btn-outline-success">Đăng nhập</button>
+                <Link to="/signUp" className="active">
+                    <button style={{marginLeft: "50px"}} type="button" className="btn btn-outline-info">Đăng kí ngay!
+                    </button>
+                </Link>
+
             </form>
         </div>
 
