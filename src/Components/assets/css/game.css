@@ -42,3 +42,80 @@
     pointer-events: none;
     border-color: #5c636a;
 }
+#search2 {
+    position: relative;
+}
+#searchText2 {
+    background-color: #bfb5b5;
+    height: 46px;
+    border-radius: 23px;
+    border: none;
+    color: rgba(7, 5, 5, 0.85);
+    width: 220px; /* Thêm giá trị width ban đầu */
+    font-size: 14px;
+    padding: 0px 15px 0px 45px;
+    transition: width 0.5s ease-in-out;
+
+
+}
+#searchText2:focus {
+    width: 100%;
+    background-color: #fbfbfb;
+
+}
+.fa-search {
+    position: absolute;
+    color: #828080;
+    left: 20px;
+    top: 16px;
+    width: 18px;
+    height: 18px;
+    font-size: 16px;
+}
+.select-type2 {
+    appearance: none;
+    background-color: #dcd7d7;
+    height: 46px;
+    border-radius: 23px;
+    border: none;
+    color: rgba(7, 5, 5, 0.85);
+    font-size: 14px;
+    padding: 0px 40px 0px 35px;
+}
+
+.selectType {
+    position: relative;
+}
+.selectType i {
+    position: absolute;
+    color: #828080;
+    left: 118px;
+    top: 16px;
+    width: 18px;
+    height: 18px;
+    font-size: 16px;
+}
+.less{
+    accent-color: yellow;
+
+    width: 100%;
+}
+.heigh{
+    accent-color: rgb(207, 22, 22);
+    width: 100%;
+}
+
+.range-label {
+    width: 100%;
+    color: white;
+}
+.range-label .max {
+    float: right;
+}
+.range-label .min {
+    float: left;
+}
+.range-label .val {
+    margin-left:  80px;
+
+}

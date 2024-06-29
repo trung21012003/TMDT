@@ -5,7 +5,7 @@ export const  productList = [
         name:"Fortnite",
         type:"Sandbox",
         id: 1,
-        price: "4.8$",
+        price: 48,
         image: "popular-01.jpg",
         image1: "feature-left.jpg",
         image2: "feature-right.jpg",
@@ -27,7 +27,7 @@ export const  productList = [
         image5: "pubg5.jpg",
         description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
             "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
-        price: "5$",
+        price: 50,
         bought: "10M"
     },
     {
@@ -35,7 +35,7 @@ export const  productList = [
         type:"Steam-X",
         id: 3,
         image: "popular-03.jpg",
-        price: "48$",
+        price: 48,
         bought: "2.3M"
     },
     {
@@ -43,7 +43,7 @@ export const  productList = [
         type:"Steam-X",
         id: 7,
         image: "popular-03.jpg",
-        price: "48$",
+        price: 48,
         bought: "2.3M"
     },
     {
@@ -51,7 +51,7 @@ export const  productList = [
         type:"Steam-X",
         id: 8,
         image: "popular-03.jpg",
-        price: "48$",
+        price: 48,
         bought: "2.3M"
     },
     {
@@ -59,7 +59,7 @@ export const  productList = [
         type:"Steam-X",
         id: 9,
         image: "popular-03.jpg",
-        price: "48$",
+        price: 49,
         bought: "2.3M"
     },
     {
@@ -67,7 +67,7 @@ export const  productList = [
         type:"Steam-X",
         id: 10,
         image: "popular-03.jpg",
-        price: "48$",
+        price: 52,
         bought: "2.3M"
     },
     {
@@ -75,7 +75,7 @@ export const  productList = [
         type:"Steam-X",
         id: 11,
         image: "popular-03.jpg",
-        price: "48$",
+        price: 39,
         bought: "2.3M"
     },
     {
@@ -83,7 +83,7 @@ export const  productList = [
         type:"Steam-X",
         id: 12,
         image: "popular-03.jpg",
-        price: "48$",
+        price: 36,
         bought: "2.3M"
     },
 
@@ -92,7 +92,7 @@ export const  productList = [
         type:"Steam-X",
         id: 4,
         image: "popular-04.jpg",
-        price: "48$",
+        price: 10,
         bought: "2.3M"
     },
     {
@@ -100,14 +100,14 @@ export const  productList = [
         type:"Matrix Games",
         id: 5,
         image: "popular-05.jpg",
-        price: "48$",
+        price: 70,
         bought: "1M"
     },
     {
         name:"Game Pikachu",
         type:"Sandbox",
         id: 6,
-        price: "5.8$",
+        price: 99,
         image: "popular-01.jpg",
         bought: "5M"
     },
@@ -116,7 +116,7 @@ export const  productList = [
         type:"Steam-X",
         id: 13,
         image: "popular-03.jpg",
-        price: "50$",
+        price: 60,
         bought: "5.3M"
     },
     {
@@ -124,7 +124,7 @@ export const  productList = [
         type:"Steam-X",
         id: 14,
         image: "popular-03.jpg",
-        price: "50$",
+        price: 30,
         bought: "5.3M"
     },
 ]
