@@ -7,10 +7,10 @@ import './assets/css/flex-slider.css';
 import './assets/css/templatemo-cyborg-gaming.css';
 import {Link, useLocation} from 'react-router-dom';
 import {useSelector} from "react-redux";
-
+import 'font-awesome/css/font-awesome.min.css';
 import BtnLogin from "./BtnLogin";
 import {useTranslation} from "react-i18next";
-
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 export default function Header() {
     const location = useLocation();
@@ -45,13 +45,20 @@ export default function Header() {
                                 </div>
 
                                 <ul className="nav">
-                                    <li><Link to="/" className={currentPath === '/' ? 'active' : ''}>{t("home")}</Link></li>
-                                    <li><Link to="/browse" className={currentPath === '/browse' ? 'active' : ''}>Browe</Link></li>
-                                    <li><Link to="/streams" className={currentPath === '/streams' ? 'active' : ''}>Streams</Link></li>
-                                    <li><Link to="/games" className={currentPath === '/games' ? 'active' : ''}>Games</Link></li>
+                                    <li><Link to="/" className={currentPath === '/' ? 'active' : ''}>{t("home")}</Link>
+                                    </li>
+                                    <li><Link to="/cart"
+                                              className={currentPath === '/cart' ? 'active' : ''}><i style={{fontSize :"20px"}}
+                                        className="fa fa-cart-plus"></i></Link></li>
+                                    <li><Link to="/browse"
+                                              className={currentPath === '/browse' ? 'active' : ''}>Browe</Link></li>
+                                    <li><Link to="/streams"
+                                              className={currentPath === '/streams' ? 'active' : ''}>Streams</Link></li>
+                                    <li><Link to="/games"
+                                              className={currentPath === '/games' ? 'active' : ''}>Games</Link></li>
                                     <li>
                                         <div className="language">
-                                            <select style={{backgroundColor: "#666"}} className="chooseLanguage"
+                                            <select style={{backgroundColor: "#668"}} className="chooseLanguage"
                                                     onChange={(e) => changeLanguage(e.target.value)}>
                                                 <option value="vi" className="language-vi">
                                                     Tiếng Việt
@@ -66,7 +73,7 @@ export default function Header() {
                                     <BtnLogin/>
                                 </ul>
                                 <a className='menu-trigger'>
-                                <span>Menu</span>
+                                    <span>Menu</span>
                                 </a>
 
                             </nav>

@@ -9,6 +9,11 @@ import Details from "./Components/Details";
 import Stream from "./Components/Stream";
 import "./Components/i18n/i18n"
 import Game from "./Components/Game";
+import Cart from "./Components/Cart";
+import {Component} from "react";
+
+
+
 
 function App() {
   return (
@@ -22,8 +27,9 @@ function App() {
                   <Route path="/login" element={<Login />} />
                   <Route path="/browse" element={<Browse />} />
                   <Route path="/details/:id" element={<Details />} />
-                  <Route  path="/streams" element={<Stream /> } />
+                  <Route path="/streams" element={<Stream /> } />
                   <Route path="/games" element={<Game />} />
+                  <Route path="/cart" element={<Cart />} />
               </Routes>
 
           </BrowserRouter>

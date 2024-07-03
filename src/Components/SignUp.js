@@ -44,7 +44,8 @@ export default function SignUp() {
                                 {/*new form*/}
 
                                 <Link to="/">
-                                    <button type="submit" className="btn btn-light col-3">Back to home</button>
+                                    <button type="submit" className="btn btn-light col-3"> Back to home
+                                    </button>
                                 </Link>
                                 <div className="col-md-6">
                                     <label htmlFor="inputEmail4" className="form-label">Email</label>
