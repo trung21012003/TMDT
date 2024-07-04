@@ -42,6 +42,10 @@
     pointer-events: none;
     border-color: #5c636a;
 }
+
+.form-label{
+    color :  #e75e8d;
+
 #search2 {
     position: relative;
 }
@@ -117,5 +121,6 @@
 }
 .range-label .val {
     margin-left:  80px;
+
 
 }
