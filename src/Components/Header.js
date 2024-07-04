@@ -47,8 +47,8 @@ export default function Header() {
                                 <ul className="nav">
                                     <li><Link to="/" className={currentPath === '/' ? 'active' : ''}>{t("home")}</Link>
                                     </li>
-                                    <li><Link to="/cart"
-                                              className={currentPath === '/cart' ? 'active' : ''}><i style={{fontSize :"20px"}}
+                                    <li><Link to="/checkout"
+                                              className={currentPath === '/checkout' ? 'active' : ''}><i style={{fontSize :"20px"}}
                                         className="fa fa-cart-plus"></i></Link></li>
                                     <li><Link to="/browse"
                                               className={currentPath === '/browse' ? 'active' : ''}>Browe</Link></li>

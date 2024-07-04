@@ -1,0 +1,41 @@
+
+.container-son {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(7, 5, 5, 0.85);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
+    margin-left: 400px;
+    width: 860px;
+    height: 430px;
+}
+.success-icon {
+    color: #e75e8d;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    color: white;
+    background-color: #e75e8d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:#e75e8d;
+}
