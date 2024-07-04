@@ -11,6 +11,8 @@ import "./Components/i18n/i18n"
 import Game from "./Components/Game";
 import Cart from "./Components/Cart";
 import {Component} from "react";
+import Checkout from "./Components/Checkout";
+import PaymentSuccess from "./Components/PaymentSuccess";
 
 
 
@@ -29,7 +31,7 @@ function App() {
                   <Route path="/details/:id" element={<Details />} />
                   <Route path="/streams" element={<Stream /> } />
                   <Route path="/games" element={<Game />} />
-                  <Route path="/cart" element={<Cart />} />
+                  <Route path="/checkout" element={<Checkout />} />
               </Routes>
 
           </BrowserRouter>
