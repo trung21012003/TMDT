@@ -5,11 +5,10 @@ import ReactPaginate from 'react-paginate';
 import './assets/css/game.css'
 import React, {useEffect, useState} from "react";
 import "react-range-slider-input/dist/style.css";
-// import {productList} from "../Reducers/Data";
+
 import {useDispatch, useSelector} from "react-redux";
 import {filterByName, filterByPrice, filterByType, showAllProducts} from "../Reducers/ProductReducer";
-import RangeSlider from "react-range-slider-input";
-import {addUser} from "../Reducers/UserReducer";
+
 
 export default function Game() {
     const [data,setData] = useState(100)

@@ -31,7 +31,7 @@ function App() {
                   <Route path="/details/:id" element={<Details />} />
                   <Route path="/streams" element={<Stream /> } />
                   <Route path="/games" element={<Game />} />
-                  <Route path="/checkout" element={<Checkout />} />
+                  <Route path="/cart" element={<Cart />} />
               </Routes>
 
           </BrowserRouter>
