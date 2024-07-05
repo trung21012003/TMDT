@@ -13,6 +13,7 @@ import {useTranslation} from "react-i18next";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 export default function Header() {
+    const Carts = useSelector((state) => state.cart.carts);
     const location = useLocation();
     const currentPath = location.pathname;
     const {isLoggedIn} = useSelector((state) => state.auth.isLoggedIn);
@@ -47,9 +48,15 @@ export default function Header() {
                                 <ul className="nav">
                                     <li><Link to="/" className={currentPath === '/' ? 'active' : ''}>{t("home")}</Link>
                                     </li>
-                                    <li><Link to="/checkout"
-                                              className={currentPath === '/checkout' ? 'active' : ''}><i style={{fontSize :"20px"}}
-                                        className="fa fa-cart-plus"></i></Link></li>
+                                    <li>
+                                        <Link to="/cart"
+                                              className={currentPath === '/checkout' ? 'active' : ''}><i
+                                            style={{fontSize: "20px"}}
+                                            className="fa fa-cart-plus"></i>
+                                            <sup style={{padding: "3px"}}>{Carts.length}</sup>
+                                        </Link>
+
+                                    </li>
                                     <li><Link to="/browse"
                                               className={currentPath === '/browse' ? 'active' : ''}>Browe</Link></li>
                                     <li><Link to="/streams"
