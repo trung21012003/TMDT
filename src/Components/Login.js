@@ -14,7 +14,6 @@ export default function Login() {
     const navigate = useNavigate();
 
     function submitform(data) {
-
         let foundUser = null;
         users.forEach((u) => {
             if (u.email === data.email && u.password === data.password) {

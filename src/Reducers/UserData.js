@@ -3,6 +3,11 @@ export const  userlist = [
     {
         email:"thinh@gmail.com",
         password:"12345678",
+        phone: "0326767031",
+        address:"Go Vap NVL",
+        city: "Ho Chi Minh",
+        birthday: "26/04/2003",
+        gender: "Nam",
         id: 1,
     },
     {

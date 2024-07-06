@@ -18,7 +18,7 @@ export default function Header() {
     const currentPath = location.pathname;
     const {isLoggedIn} = useSelector((state) => state.auth.isLoggedIn);
     const {i18n} = useTranslation()
-    const {t} =useTranslation()
+    const {t} =useTranslation();
     const changeLanguage = (lng) => {
         if (lng === "vi" || lng === "en") {
             i18n.changeLanguage(lng);
@@ -48,15 +48,6 @@ export default function Header() {
                                 <ul className="nav">
                                     <li><Link to="/" className={currentPath === '/' ? 'active' : ''}>{t("home")}</Link>
                                     </li>
-                                    <li>
-                                        <Link to="/cart"
-                                              className={currentPath === '/checkout' ? 'active' : ''}><i
-                                            style={{fontSize: "20px"}}
-                                            className="fa fa-cart-plus"></i>
-                                            <sup style={{padding: "3px"}}>{Carts.length}</sup>
-                                        </Link>
-
-                                    </li>
                                     <li><Link to="/browse"
                                               className={currentPath === '/browse' ? 'active' : ''}>Browe</Link></li>
                                     <li><Link to="/streams"
@@ -76,6 +67,15 @@ export default function Header() {
                                             </select>
 
                                         </div>
+                                    </li>
+                                    <li>
+                                        <Link to="/cart"
+                                              className={currentPath === '/checkout' ? 'active' : ''}><i
+                                            style={{fontSize: "20px"}}
+                                            className="fa fa-cart-plus"></i>
+                                            <sup style={{padding: "3px"}}>{Carts.length}</sup>
+                                        </Link>
+
                                     </li>
                                     <BtnLogin/>
                                 </ul>

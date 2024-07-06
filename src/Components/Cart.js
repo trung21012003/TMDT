@@ -4,12 +4,18 @@ import Footer from "./Footer";
 import React from "react";
 import 'font-awesome/css/font-awesome.min.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
-import {useSelector} from "react-redux";
+import {useSelector, useDispatch} from "react-redux";
 import {Link} from "react-router-dom";
+import {decreaseToProduct, deleteToCart, increaseToProduct, totalPriceAllProduct} from "../Reducers/CartReducer";
 
 export default function Cart(){
     const Carts = useSelector(state => state.cart.carts);
     console.log(Carts);
+
+    const dispatch = useDispatch();
+    const totalPrice =useSelector(state => state.cart.totalPrice);
+    console.log(totalPrice);
+
     return (
         <div className="container">
 
@@ -24,7 +30,7 @@ export default function Cart(){
                                 </div>
                                 <div className="card-body">
                                         {Carts.map( (product) => (
-                                        <div >
+                                        <div key={product.id}>
                                         <div className="row">
                                             <div className="col-lg-3 col-md-12 mb-4 mb-lg-0">
 
@@ -33,7 +39,7 @@ export default function Cart(){
                                                     <img
                                                         src={require(`./assets/images/${product.image}`)}
                                                         className="w-100" alt="Blue Jeans Jacket"/>
-                                                    <Link href="#!">
+                                                    <Link href="#">
                                                         <div className="mask"
                                                              style={{backgroundColor: "rgba(251, 251, 251, 0.2)"}}></div>
                                                     </Link>
@@ -47,13 +53,8 @@ export default function Cart(){
                                                 <p>Loại:  {product.type}</p>
                                                 <button
                                                     className="btn btn-primary btn-sm me-1 mb-2"
-                                                    title="Remove item">
+                                                    title="Remove item" onClick={ () => dispatch(deleteToCart(product)) }>
                                                     <i className="fa fa-trash"></i>
-                                                </button>
-                                                <button type="button"
-                                                        className="btn btn-danger btn-sm mb-2"
-                                                        title="Move to the wish list">
-                                                    <i className="fa fa-heart"></i>
                                                 </button>
 
                                             </div>
@@ -61,14 +62,14 @@ export default function Cart(){
                                             <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
 
                                                 <div className="d-flex mb-4" style={{maxWidth: "300px"}}>
-                                                    <button
+                                                    <button onClick={()=>dispatch(decreaseToProduct(product)) }
                                                         className="btn btn-primary px-3 me-2"
                                                         >
                                                         <i className="fa fa-minus"></i>
                                                     </button>
 
                                                     <div className="form-outline">
-                                                        <input id={product.id} min="0" name="quantity" value={product.quantity}
+                                                        <input id={product.id} min="0" name="quantity" value={parseInt(product.quantity)}
                                                                type="number"
                                                                className="form-control"/>
                                                         <label className="form-label" htmlFor={product.id}>Quantity</label>
@@ -76,7 +77,7 @@ export default function Cart(){
 
                                                     <button
                                                         className="btn btn-primary px-3 ms-2"
-                                                        >
+                                                        onClick={() => dispatch(increaseToProduct(product)) } >
                                                         <i className="fa fa-plus"></i>
                                                     </button>
                                                 </div>
@@ -93,12 +94,6 @@ export default function Cart(){
                                         </div>
                                             )) }
 
-                                </div>
-                            </div>
-                            <div className="card mb-4">
-                                <div className="card-body">
-                                    <p><strong>Expected shipping delivery</strong></p>
-                                    <p className="mb-0">12.10.2020 - 14.10.2020</p>
                                 </div>
                             </div>
                             <div className="card mb-4 mb-lg-0">
@@ -129,7 +124,7 @@ export default function Cart(){
                                         <li
                                             className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                                             Products
-                                            <span>$53.98</span>
+                                            <span>${totalPrice}</span>
                                         </li>
                                         <li className="list-group-item d-flex justify-content-between align-items-center px-0">
                                             Shipping
@@ -143,14 +138,23 @@ export default function Cart(){
                                                     <p className="mb-0">(including VAT)</p>
                                                 </strong>
                                             </div>
-                                            <span><strong>$53.98</strong></span>
+                                            <span><strong>${totalPrice}</strong></span>
                                         </li>
                                     </ul>
 
-                                    <button type="button" data-mdb-button-init data-mdb-ripple-init
-                                            className="btn btn-primary btn-lg btn-block">
-                                        Go to checkout
-                                    </button>
+
+                                        <button  className={Carts.length === 0 ? 'btn btn-primary btn-lg btn-block disabled ' : 'btn btn-primary btn-lg btn-block'
+                                            }>
+                                            <Link
+                                                type="button"
+                                                to="/checkout"
+
+                                            >
+                                                Go to checkout
+                                            </Link>
+                                        </button>
+
+
                                 </div>
                             </div>
                         </div>

@@ -1,12 +1,12 @@
 import CheckoutCDN from "./CheckoutCDN";
-import Header from "./Header";
-import Footer from "./Footer";
-
+import {useSelector} from "react-redux";
 
 export default function Checkout() {
+    const Carts = useSelector(state => state.cart.carts);
+    const totalPrice =useSelector(state => state.cart.totalPrice);
     return (
         <div>
-            <CheckoutCDN />
+            <CheckoutCDN/>
             <form>
                 <div role="main" className="form-all">
                     <ul className="form-section page-section">
@@ -139,7 +139,9 @@ export default function Checkout() {
                 </span>
                                     </div>
                                     <div data-wrapper-react="true">
-                <span
+                                        {Carts.map( (product) => (
+                                        <div>
+                 <span
                     className="form-product-item hover-product-item show_image show_desc new_ui"
                     categories="non-categorized"
                     pid="1004"
@@ -163,8 +165,7 @@ export default function Checkout() {
                             data-is-default-required="false"
                             data-is-default-selected="false"
                         />
-                        <div className="checked"></div>
-                        <div className="select_border"></div>
+
                       </div>
                     </div>
                     <div className="p_image">
@@ -180,7 +181,7 @@ export default function Checkout() {
                               alt="Cap Product Image"
 
                               style={{width: "100%", height: "100%", objectFit: "cover"}}
-                              src="https://www.jotform.com/uploads/ugurg/form_files/cap.png"
+                              src={require(`./assets/images/${product.image}`)}
                           />
                         </div>
                         <div className="image_zoom"></div>
@@ -192,7 +193,7 @@ export default function Checkout() {
                           <span
                               className="form-product-name"
                               id="product-name-input_3_1004"
-                          >Cap</span
+                          >{product.name}</span
                           ><span
                             className="form-product-description"
                             id="product-name-description-input_3_1004"
@@ -203,7 +204,7 @@ export default function Checkout() {
                         <span className="form-product-details"
                         ><b
                         ><span data-wrapper-react="true"
-                        >$<span id="input_3_1004_price">5.00</span></span
+                        >$<span id="input_3_1004_price">{product.price}</span></span
                         ></b
                         ></span
                         >
@@ -228,178 +229,16 @@ export default function Checkout() {
                   </div>
                 </span>
                                         <div className="p_item_separator"></div>
-                                        <span
-                                            className="form-product-item hover-product-item show_image show_desc new_ui"
-                                            categories="non-categorized"
-                                            pid="1005"
-                                            aria-labelledby="label_3"
-                                        >
-                  <div
-                      data-wrapper-react="true"
-                      className="form-product-item-detail new_ui"
-                  >
-                    <div className="p_col">
-                      <div className="p_checkbox">
-                        <input
-                            type="checkbox"
-                            className="form-checkbox form-product-input"
-                            id="input_3_1005"
-                            name="q3_myProducts[][id]"
-                            data-inputname="q3_myProducts[][id]"
-                            value="1005"
-
-                            aria-label="Select Product: Linen Shoes"
-                            data-is-default-required="false"
-                            data-is-default-selected="false"
-                        />
-                        <div className="checked"></div>
-                        <div className="select_border"></div>
-                      </div>
-                    </div>
-                    <div className="p_image">
-                      <div className="image_area form-product-image-with-options">
-                        <div
-                            style={{width: "100%", height: "100%", position: "absolute"}}
-                        >
-                          <img
-                              loading="lazy"
-                              role="img"
-                              aria-label="Linen Shoes"
-                              alt="Linen Shoes Product Image"
-                              style={{width: "100%", height: "100%", objectFit: "cover"}}
-                              src="https://www.jotform.com/uploads/ugurg/form_files/linen-shoes.png"
-                          />
-                        </div>
-                        <div className="image_zoom"></div>
-                      </div>
-                    </div>
-                    <div className="form-product-container">
-                      <span data-wrapper-react="true">
-                        <div className="title_description">
-                          <span
-                              className="form-product-name"
-                              id="product-name-input_3_1005"
-                          >Linen Shoes</span
-                          ><span
-                            className="form-product-description"
-                            id="product-name-description-input_3_1005"
-                        >You will wear it again and again, this shoe is
-                            remarkable and loyal just like you.</span
-                        >
-                        </div>
-                        <span className="form-product-details"
-                        ><b
-                        ><span data-wrapper-react="true"
-                        >$<span id="input_3_1005_price">7.00</span></span
-                        ></b
-                        ></span
-                        >
-                      </span>
-                    </div>
-                    <div className="focus_action_button_container">
-                      <a
-                          className="btn-inline-product-delete"
-                          tabindex="0"
-                          role="button"
-                          aria-label="Delete Product"
-                      >
-                      </a
-                      ><a
-                        className="btn-inline-product-settings"
-                        tabindex="0"
-                        role="button"
-                        aria-label="Product Settings"
-                    >
-                      </a>
-                    </div>
-                  </div>
-                </span>
-                                        <div className="p_item_separator"></div>
-                                        <span
-                                            className="form-product-item hover-product-item show_image show_desc new_ui"
-                                            categories="non-categorized"
-                                            pid="1006"
-                                            aria-labelledby="label_3"
-                                        >
-                  <div
-                      data-wrapper-react="true"
-                      className="form-product-item-detail new_ui"
-                  >
-                    <div className="p_col">
-                      <div className="p_checkbox">
-                        <input
-                            type="checkbox"
-                            className="form-checkbox form-product-input"
-                        />
-                        <div className="checked"></div>
-                        <div className="select_border"></div>
-                      </div>
-                    </div>
-                    <div className="p_image">
-                      <div className="image_area form-product-image-with-options">
-                        <div
-                            style={{width: "100%", height: "100%", position: "absolute"}}
-                        >
-                          <img
-                              loading="lazy"
-                              role="img"
-                              aria-label="Hoodie"
-                              alt="Hoodie Product Image"
-                              style={{width: "100%", height: "100%", objectFit: "cover"}}
-                              src="https://www.jotform.com/uploads/ugurg/form_files/hoodie.png"
-                          />
-                        </div>
-                        <div className="image_zoom"></div>
-                      </div>
-                    </div>
-                    <div for="input_3_1006" className="form-product-container">
-                      <span data-wrapper-react="true">
-                        <div className="title_description">
-                          <span
-                              className="form-product-name"
-                              id="product-name-input_3_1006"
-                          >Hoodie</span
-                          ><span
-                            className="form-product-description"
-                            id="product-name-description-input_3_1006"
-                        >Durably stitched surfaces, clean finishes and the
-                            perfect amount of shine to make you dazzle.</span
-                        >
-                        </div>
-                        <span className="form-product-details"
-                        ><b
-                        ><span data-wrapper-react="true"
-                        >$<span id="input_3_1006_price">9.00</span></span
-                        ></b
-                        ></span
-                        >
-                      </span>
-                    </div>
-                    <div className="focus_action_button_container">
-                      <a
-                          className="btn-inline-product-delete"
-                          tabindex="0"
-                          role="button"
-                          aria-label="Delete Product"
-                      >
-                      </a
-                      ><a
-                        className="btn-inline-product-settings"
-                        tabindex="0"
-                        role="button"
-                        aria-label="Product Settings"
-                    >
-                      </a>
-                    </div>
-                  </div>
-                </span>
+                </div>
+                                            ))
+                                        }
                                         <div className="payment_footer new_ui">
                                             <div className="total_area">
                                                 <div className="form-payment-total">
                                                     <div id="total-text">Total</div>
                                                     <div className="form-payment-price">
                         <span data-wrapper-react="true"
-                        >$<span id="payment_total">0.00</span></span
+                        >$<span id="payment_total">{totalPrice}</span></span
                         >
                                                     </div>
                                                 </div>
@@ -515,5 +354,5 @@ export default function Checkout() {
                 </div>
             </form>
         </div>
-            )
-            }
+    )
+}

@@ -12,6 +12,7 @@ export const  productList = [
         image3: "details-01.jpg",
         image4: "details-02.jpg",
         image5: "details-03.jpg",
+        video: "https://www.youtube.com/watch?v=G8D8xVwhRy8&ab_channel=YEAH1SHOW",
         description: "Fornite là một tựa game không còn quá xa lạ với các fan của Fornite. Game thuộc thể loại battle royale kết hợp cách chơi xây dựng mới lạ và hấp dẫn chắc chắn sẽ thu hút đông đảo người chơi.",
         bought: "5M"
     },
@@ -34,7 +35,12 @@ export const  productList = [
         name:"Dota2",
         type:"Steam-X",
         id: 3,
-        image: "popular-03.jpg",
+        image: "dota1.jpg",
+        image1: "dota2.jpg",
+        image2: "dota3.jpg",
+        image3: "dota4.png",
+        image4: "dota5.jpg",
+        image5: "dota4.png",
         price: 48,
         bought: "2.3M"
     },
