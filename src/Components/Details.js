@@ -2,7 +2,7 @@ import React from "react";
 import 'font-awesome/css/font-awesome.min.css';
 import Header from "./Header";
 import Footer from "./Footer";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {useSelector} from "react-redux";
 
 export default function Details(){
@@ -30,9 +30,9 @@ export default function Details(){
                                         <div className="col-lg-8">
                                             <div className="thumb">
                                                 <img src={require(`./assets/images/${product.image2}`)} style={{borderRadius: "23px"}} />
-                                                    <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank">
+                                                    <Link to={product.video} target="_blank">
                                                         <i className="fa fa-play"></i>
-                                                    </a>
+                                                    </Link>
                                             </div>
                                         </div>
                                     </div>
