@@ -66,7 +66,7 @@ export default function Game() {
                         <div className="page-content">
                             <div className="picture">
                                 <img src={require("./assets/images/listgame.png")}
-                                     style={{minWidth: "380px", height: "450px"}} alt=""/>
+                                     style={{minWidth: "249px", minHeight: "249px"}} alt=""/>
                             </div>
                             <div className="most-popular">
                                 <div className="row">
