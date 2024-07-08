@@ -49,7 +49,7 @@ export default function Header() {
                                     <li><Link to="/" className={currentPath === '/' ? 'active' : ''}>{t("home")}</Link>
                                     </li>
                                     <li><Link to="/browse"
-                                              className={currentPath === '/browse' ? 'active' : ''}>Browe</Link></li>
+                                              className={currentPath === '/browse' ? 'active' : ''}>Browse</Link></li>
                                     <li><Link to="/streams"
                                               className={currentPath === '/streams' ? 'active' : ''}>Streams</Link></li>
                                     <li><Link to="/games"
