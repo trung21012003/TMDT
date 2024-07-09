@@ -1,9 +1,13 @@
+import {useTranslation} from "react-i18next";
+
 export default function LiveStream(){
+    const {i18n} = useTranslation()
+    const {t} =useTranslation();
     return (
         <div className="live-stream">
             <div className="col-lg-12">
                 <div className="heading-section">
-                    <h4><em>Most Popular</em> Live Stream</h4>
+                    <h4><em>{t("mostPopular")}</em> {t("liveStream")}</h4>
                 </div>
             </div>
             <div className="row">
@@ -14,7 +18,7 @@ export default function LiveStream(){
                             <div className="hover-effect">
                                 <div className="content">
                                     <div className="live">
-                                        <a href="#">Live</a>
+                                        <a href="#">{t("live")}</a>
                                     </div>
                                     <ul>
                                         <li><a href="#"><i className="fa fa-eye"></i> 1.2K</a></li>
@@ -40,7 +44,7 @@ export default function LiveStream(){
                             <div className="hover-effect">
                                 <div className="content">
                                     <div className="live">
-                                        <a href="#">Live</a>
+                                        <a href="#">{t("live")}</a>
                                     </div>
                                     <ul>
                                         <li><a href="#"><i className="fa fa-eye"></i> 1.2K</a></li>
@@ -55,7 +59,7 @@ export default function LiveStream(){
                                      style={{maxWidth: "46px", borderRadius: "50%", float: "left"}}/>
                             </div>
                             <span><i className="fa fa-check"></i> LahutaMalc</span>
-                            <h4>CS-GO 36 Hours Live Stream</h4>
+                            <h4>CS-GO 36 Hours {t("liveStream")}</h4>
                         </div>
                     </div>
                 </div>
@@ -66,7 +70,7 @@ export default function LiveStream(){
                             <div className="hover-effect">
                                 <div className="content">
                                     <div className="live">
-                                        <a href="#">Live</a>
+                                        <a href="#">{t("live")}</a>
                                     </div>
                                     <ul>
                                         <li><a href="#"><i className="fa fa-eye"></i> 1.2K</a></li>
@@ -118,7 +122,7 @@ export default function LiveStream(){
                             <div className="hover-effect">
                                 <div className="content">
                                     <div className="live">
-                                        <a href="#">Live</a>
+                                        <a href="#">{t("live")}</a>
                                     </div>
                                     <ul>
                                         <li><a href="#"><i className="fa fa-eye"></i> 1.2K</a></li>
@@ -144,7 +148,7 @@ export default function LiveStream(){
                             <div className="hover-effect">
                                 <div className="content">
                                     <div className="live">
-                                        <a href="#">Live</a>
+                                        <a href="#">{t("live")}</a>
                                     </div>
                                     <ul>
                                         <li><a href="#"><i className="fa fa-eye"></i> 1.2K</a></li>
@@ -159,7 +163,7 @@ export default function LiveStream(){
                                      style={{maxWidth: "46px", borderRadius: "50%", float: "left"}}/>
                             </div>
                             <span><i className="fa fa-check"></i> LahutaMalc</span>
-                            <h4>CS-GO 36 Hours Live Stream</h4>
+                            <h4>CS-GO 36 Hours {t("liveStream")}</h4>
                         </div>
                     </div>
                 </div>
@@ -170,7 +174,7 @@ export default function LiveStream(){
                             <div className="hover-effect">
                                 <div className="content">
                                     <div className="live">
-                                        <a href="#">Live</a>
+                                        <a href="#">{t("live")}</a>
                                     </div>
                                     <ul>
                                         <li><a href="#"><i className="fa fa-eye"></i> 1.2K</a></li>
@@ -196,7 +200,7 @@ export default function LiveStream(){
                             <div className="hover-effect">
                                 <div className="content">
                                     <div className="live">
-                                        <a href="#">Live</a>
+                                        <a href="#">{t("live")}</a>
                                     </div>
                                     <ul>
                                         <li><a href="#"><i className="fa fa-eye"></i> 1.2K</a></li>
@@ -217,7 +221,7 @@ export default function LiveStream(){
                 </div>
                 <div className="col-lg-12">
                     <div className="main-button">
-                        <a href="streams.html">Load More Streams</a>
+                        <a href="streams.html">{t("loadMoreStream")}</a>
                     </div>
                 </div>
             </div>
