@@ -3,12 +3,14 @@ import styles from "./assets/css/Popular.module.css";
 import React from "react";
 import {addToCart} from "../Reducers/CartReducer";
 import {useDispatch, useSelector} from "react-redux";
+import {useTranslation} from "react-i18next";
 
 export default function ListGame({ items }) {
     const carts = useSelector(state => state.cart);
     console.log(carts);
     const dispatch = useDispatch();
-
+    const {i18n} = useTranslation()
+    const {t} =useTranslation();
     return (
 
         <div className="row">
@@ -23,10 +25,10 @@ export default function ListGame({ items }) {
                         </ul>
                         <div className="row">
                             <div className="col-sm-6">
-                                <Link className="btn btn-link" to={`/details/${product.id}`} >Xem chi tiết</Link>
+                                <Link className="btn btn-link" to={`/details/${product.id}`} >{t("details")}</Link>
                             </div>
                             <div className="col-sm-6">
-                                <button onClick={() =>  dispatch(addToCart(product))} >Add to cart</button>
+                                <button onClick={() =>  dispatch(addToCart(product))} >{t("addToCart")}</button>
                             </div>
 
                         </div>

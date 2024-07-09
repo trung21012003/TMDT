@@ -2,6 +2,7 @@ import React from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import {useTranslation} from "react-i18next";
 export default function CarouselProduct() {
     const settings = {
         dots: true,
@@ -13,16 +14,18 @@ export default function CarouselProduct() {
         arrows: false,
         autoplaySpeed : 2000,
     };
+    const {i18n} = useTranslation()
+    const {t} =useTranslation();
     return (
         <Slider {...settings}>
             <div className="item">
                 <div className="thumb">
                     <img style={{width:"220px",height:"378px"}} src={require("./assets/images/featured-01.jpg")} alt=""/>
                     <div className="hover-effect">
-                        <h6>2.4K Streaming</h6>
+                        <h6>2.4K {t("stream")}</h6>
                     </div>
                 </div>
-                <h4>CS-GO<br/><span>249K Downloads</span></h4>
+                <h4>CS-GO<br/><span>249K {t("download")}</span></h4>
                 <ul>
                     <li><i className="fa fa-star"></i> 4.8</li>
                     <li><i className="fa fa-download"></i> 2.3M</li>
@@ -32,10 +35,10 @@ export default function CarouselProduct() {
                 <div className="thumb">
                     <img style={{width:"220px",height:"378px"}} src={require("./assets/images/featured-02.jpg")} alt=""/>
                     <div className="hover-effect">
-                        <h6>2.4K Streaming</h6>
+                        <h6>2.4K {t("stream")}</h6>
                     </div>
                 </div>
-                <h4>Gamezer<br/><span>249K Downloads</span></h4>
+                <h4>Gamezer<br/><span>249K {t("download")}</span></h4>
                 <ul>
                     <li><i className="fa fa-star"></i> 4.8</li>
                     <li><i className="fa fa-download"></i> 2.3M</li>
@@ -45,10 +48,10 @@ export default function CarouselProduct() {
                 <div className="thumb">
                     <img style={{width:"220px",height:"378px"}} src={require("./assets/images/featured-03.jpg")} alt=""/>
                     <div className="hover-effect">
-                        <h6>2.4K Streaming</h6>
+                        <h6>2.4K {t("stream")}</h6>
                     </div>
                 </div>
-                <h4>Island Rusty<br/><span>249K Downloads</span></h4>
+                <h4>Island Rusty<br/><span>249K {t("download")}</span></h4>
                 <ul>
                     <li><i className="fa fa-star"></i> 4.8</li>
                     <li><i className="fa fa-download"></i> 2.3M</li>
