@@ -83,7 +83,7 @@ export default function Details(){
                                             </div>
                                             <div className="col-lg-12">
                                                 <div className="main-border-button">
-                                                    <a href="#">Download Fortnite Now!</a>
+                                                    <a href="#">Download Now!</a>
                                                 </div>
                                             </div>
                                         </div>

@@ -49,11 +49,11 @@ export default function Header() {
                                     <li><Link to="/" className={currentPath === '/' ? 'active' : ''}>{t("home")}</Link>
                                     </li>
                                     <li><Link to="/browse"
-                                              className={currentPath === '/browse' ? 'active' : ''}>{t("browser")}</Link></li>
+                                              className={currentPath === '/browse' ? 'active' : ''}>Browse</Link></li>
                                     <li><Link to="/streams"
-                                              className={currentPath === '/streams' ? 'active' : ''}>{t("stream")}</Link></li>
+                                              className={currentPath === '/streams' ? 'active' : ''}>Streams</Link></li>
                                     <li><Link to="/games"
-                                              className={currentPath === '/games' ? 'active' : ''}>{t("game")}</Link></li>
+                                              className={currentPath === '/games' ? 'active' : ''}>Games</Link></li>
                                     <li>
                                         <div className="language">
                                             <select style={{backgroundColor: "#668"}} className="chooseLanguage"
