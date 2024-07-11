@@ -2,11 +2,8 @@ import LiveStream from "./LiveStream";
 import CarouselProduct from "./CarouselProduct";
 import Header from "./Header";
 import Footer from "./Footer";
-import {useTranslation} from "react-i18next";
 
 export default function Stream(){
-    const {i18n} = useTranslation()
-    const {t} =useTranslation();
     return(
         <div className="container">
             <Header />
@@ -17,7 +14,7 @@ export default function Stream(){
                             <div className="col-lg-8">
                                 <div className="featured-games header-text">
                                     <div className="heading-section">
-                                        <h4><em>{t("live")}</em> {t("stream")}</h4>
+                                        <h4><em>Live</em> Streams</h4>
                                     </div>
                                        <CarouselProduct />
                                 </div>
@@ -25,7 +22,7 @@ export default function Stream(){
                             <div className="col-lg-4">
                                 <div className="top-streamers">
                                     <div className="heading-section">
-                                        <h4><em>{t("top")}</em> {t("streamer")}</h4>
+                                        <h4><em>Top</em> Streamers</h4>
                                     </div>
                                     <ul>
                                         <li>
@@ -33,7 +30,7 @@ export default function Stream(){
                                             <img src={require("./assets/images/avatar-01.jpg")} alt="" style={{maxWidth: "46px", borderRadius: "50%", marginRight: "15px" }}/>
                                                 <h6><i className="fa fa-check"></i> LahutaM</h6>
                                                 <div className="main-button">
-                                                    <a href="#">{t("follow")}</a>
+                                                    <a href="#">Follow</a>
                                                 </div>
                                         </li>
                                         <li>
@@ -41,7 +38,7 @@ export default function Stream(){
                                             <img src={require("./assets/images/avatar-02.jpg")} alt="" style={{maxWidth: "46px", borderRadius: "50%", marginRight: "15px" }} />
                                                 <h6><i className="fa fa-check"></i> Kengan</h6>
                                                 <div className="main-button">
-                                                    <a href="#">{t("follow")}</a>
+                                                    <a href="#">Follow</a>
                                                 </div>
                                         </li>
                                         <li>
@@ -49,7 +46,7 @@ export default function Stream(){
                                             <img src={require("./assets/images/avatar-03.jpg")} alt="" style={{maxWidth: "46px", borderRadius: "50%", marginRight: "15px" }} />
                                                 <h6><i className="fa fa-check"></i> Areluwa</h6>
                                                 <div className="main-button">
-                                                    <a href="#">{t("follow")}</a>
+                                                    <a href="#">Follow</a>
                                                 </div>
                                         </li>
                                         <li>
@@ -57,7 +54,7 @@ export default function Stream(){
                                             <img src={require("./assets/images/avatar-04.jpg")} alt="" style={{maxWidth: "46px", borderRadius: "50%", marginRight: "15px" }} />
                                                 <h6><i className="fa fa-check"></i> Omeg</h6>
                                                 <div className="main-button">
-                                                    <a href="#">{t("follow")}</a>
+                                                    <a href="#">Follow</a>
                                                 </div>
                                         </li>
                                         <li>
@@ -65,7 +62,7 @@ export default function Stream(){
                                             <img src={require("./assets/images/avatar-01.jpg")} alt="" style={{maxWidth: "46px", borderRadius: "50%", marginRight: "15px" }} />
                                                 <h6><i className="fa fa-check"></i> GangTeam</h6>
                                                 <div className="main-button">
-                                                    <a href="#">{t("follow")}</a>
+                                                    <a href="#">Follow</a>
                                                 </div>
                                         </li>
                                     </ul>
