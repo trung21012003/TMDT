@@ -20,8 +20,11 @@ const cartSlice = createSlice({
         deleteToCart: (state, action) => {
             const productIndexRemove =  action.payload.id
             const newCart = state.carts.filter((item) => item.id !== productIndexRemove);
-            state.totalPrice = calculateTotalPrice(state.carts);
-            return {...state, carts: newCart};
+            return {
+                ...state,
+                carts: newCart,
+                totalPrice: calculateTotalPrice(newCart) // Sử dụng newCart để tính toán totalPrice
+            };
 
         },
         increaseToProduct: (state, action) => {
