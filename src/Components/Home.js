@@ -3,6 +3,9 @@ import Header from "./Header";
 import Footer from "./Footer";
 import LibraryGame from "./LibraryGame";
 import {useTranslation} from "react-i18next";
+import CarouselProduct from "./CarouselProduct";
+import React from "react";
+import Category from "./Category";
 export default function Home() {
     const {i18n} = useTranslation()
     const {t} =useTranslation();
@@ -37,11 +40,21 @@ export default function Home() {
                                 </div>
                             </div>
                             <LibraryGame/>
+                            <div className="most-popular">
+                                <div className="row">
+                                    <div className="col-lg-12">
+                                        <div className="heading-section">
+                                            <h4>{t("category")}</h4>
+                                        </div>
+                                        <Category/>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <Footer/>
                 </div>
             </div>
-            <Footer/>
         </div>
 
     )

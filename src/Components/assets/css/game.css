@@ -122,3 +122,19 @@
 .range-label .val {
     margin-left:  80px;
 }
+.overlay {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    width: 250px;
+    height: 200px;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bold;
+}
+.thumb{
+    position: relative;
+}
+.text{
+    margin-top: 120px;
+}

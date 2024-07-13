@@ -18,7 +18,7 @@ export default function CarouselProduct() {
     const {t} =useTranslation();
     return (
         <Slider {...settings}>
-            <div className="item">
+            <div className="item" >
                 <div className="thumb">
                     <img style={{width:"220px",height:"378px"}} src={require("./assets/images/featured-01.jpg")} alt=""/>
                     <div className="hover-effect">
