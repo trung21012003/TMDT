@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {Link, useNavigate} from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import {login} from "../Reducers/AuthReducer";
+import {useTranslation} from "react-i18next";
 
 export default function Login() {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -12,7 +13,8 @@ export default function Login() {
     const users = useSelector((state) => state.users );
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
+    const {i18n} = useTranslation()
+    const {t} =useTranslation();
     function submitform(data) {
         let foundUser = null;
         users.forEach((u) => {
@@ -35,7 +37,7 @@ export default function Login() {
     return (
         <div className={styles.login} >
 
-            <h1> Đăng Nhập </h1>
+            <h1> {t("LOGIN")} </h1>
 
             <form onSubmit={handleSubmit(submitform)}>
 
@@ -57,9 +59,9 @@ export default function Login() {
                        })} />
                 {errors.password && <span className={styles.span}>{errors.password.message}</span>}
                 <br/>
-                <button type="submit" className="btn btn-outline-success">Đăng nhập</button>
+                <button type="submit" className="btn btn-outline-success">{t("login")}</button>
                 <Link to="/signUp" className="active">
-                    <button style={{marginLeft: "50px"}} type="button" className="btn btn-outline-info">Đăng kí ngay!
+                    <button style={{marginLeft: "90px"}} type="button" className="btn btn-outline-info">{t("register")}
                     </button>
                 </Link>
 

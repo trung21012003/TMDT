@@ -35,7 +35,18 @@ const resources = {
             goToCheckout:"Go to checkout",
             stream:"Stream",
             login:"Login",
-            live:"Live"
+            live:"Live",
+            logout:"Logout",
+            register:"Register",
+            category: "CATEGORY",
+            action:"ACTION",
+            sport:"SPORT",
+            survival:"SURVIVAL",
+            adventure:"ADVENTURE",
+            horrified:"HORRIFIED",
+            simulation:"SIMULATION",
+            racing:"RACING",
+            fighting:"FIGHTING"
         }
     },
     vi: {
@@ -70,7 +81,18 @@ const resources = {
             goToCheckout:"Tiến hành thanh toán",
             stream: "Phát Sóng",
             login:"Đăng Nhập",
-            live:"Trực tiếp"
+            live:"Trực tiếp",
+            logout:"Đăng Xuất",
+            register:"Đăng Kí",
+            category:"THỂ LOẠI",
+            action:"HÀNH ĐỘNG",
+            sport:"THỂ THAO",
+            survival:"SINH TỒN",
+            adventure:"PHIÊU LƯU",
+            horrified:"KINH DỊ",
+            simulation:"ĐƠN GIẢN",
+            racing:"TỐC ĐỘ",
+            fighting:"ĐỐI KHÁNG"
         }
     }
 };

@@ -53,7 +53,7 @@ export default function Header() {
                                             <select style={{backgroundColor: "rgb(31,33,34)", color:"#5f5e60", border: "none"}}  className="chooseLanguage"
                                                     onChange={(e) => changeLanguage(e.target.value)}>
                                                 <option value="vi" className="language-vi" >
-                                                    Tiếng Việt
+                                                    Vietnamese
                                                 </option>
                                                 <option value="en" className="language-en">
                                                     English
