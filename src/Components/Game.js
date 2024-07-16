@@ -66,7 +66,7 @@ export default function Game() {
                         <div className="page-content">
                             <div className="picture">
                                 <img src={require("./assets/images/listgame.png")}
-                                     style={{minWidth: "279px", minHeight: "355px"}} alt=""/>
+                                     style={{minWidth: "249px", minHeight: "249px"}} alt=""/>
                             </div>
                             <div className="most-popular">
                                 <div className="row">
@@ -101,7 +101,7 @@ export default function Game() {
                                         <div>
                                             <div className="range-label">
                                                 <span className="min">0$</span>
-                                                <span className="val">{data}$ </span>
+                                                <span className="val">{data === 100 ? "Giá Bất Kì" : data} $ </span>
                                                 <span className="max">100$</span>
                                             </div>
 
@@ -116,9 +116,9 @@ export default function Game() {
                             </div>
                             <div className="most-popular">
                                 <div className="row">
-                                    <div className="col-lg-12" >
+                                    <div className="col-lg-12">
 
-                                        <ListGame items={currentItems} />
+                                        <ListGame items={currentItems}/>
                                     </div>
                                 </div>
                                 <div>

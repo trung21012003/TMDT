@@ -445,7 +445,7 @@ Header Style
 }
 
 .header-area .main-nav .logo {
-    border-right: 1px solid #27292a;
+    border-right: 2px solid #27292a;
     flex-basis: 25%;
     margin-right: 5%;
     -webkit-transition: all 0.3s ease 0s;
@@ -455,7 +455,7 @@ Header Style
 }
 
 .header-area .main-nav .logo img {
-    width: 191px;
+    width: 210px;
 }
 
 .background-header .main-nav .logo {
@@ -469,7 +469,7 @@ Header Style
 .header-area .main-nav .nav {
     display: inline-flex;
     flex-basis: 70%;
-    justify-content: flex-end;
+    justify-content: flex-start;
     vertical-align: middle;
     text-align: right;
     margin-top: 0px;
@@ -483,9 +483,13 @@ Header Style
 }
 
 .header-area .main-nav .nav li {
-    padding-left: 10px;
-    padding-right: 10px;
-    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    justify-content: space-between;
+
+    width:120px;
+
 }
 
 .header-area .main-nav .nav li a {
@@ -1776,4 +1780,14 @@ body {
     .gaming-library .item ul li {
         width: 16%;
     }
+}
+
+.btn-add:hover {
+    background-color: #5c636a;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

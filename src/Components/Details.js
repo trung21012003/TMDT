@@ -3,11 +3,13 @@ import 'font-awesome/css/font-awesome.min.css';
 import Header from "./Header";
 import Footer from "./Footer";
 import {Link, useParams} from "react-router-dom";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {addToCart} from "../Reducers/CartReducer";
 
 export default function Details(){
     const {id} = useParams();
     console.log(id);
+    const dispatch = useDispatch();
     const products = useSelector((state) => state.products);
     console.log(products);
     const existingProduct = products.filter(f => f.id == id);
@@ -50,8 +52,8 @@ export default function Details(){
                                             <div className="col-lg-6">
                                                 <div className="left-info">
                                                     <div className="left">
-                                                        <h4>Fortnite</h4>
-                                                        <span>Sandbox</span>
+                                                        <h4>{product.name}</h4>
+                                                        <span>{product.type}</span>
                                                     </div>
                                                     <ul>
                                                         <li><i className="fa fa-star"></i> 4.8</li>
@@ -83,7 +85,7 @@ export default function Details(){
                                             </div>
                                             <div className="col-lg-12">
                                                 <div className="main-border-button">
-                                                    <a href="#">Download Now!</a>
+                                                    <Link to="/cart" onClick={() => dispatch(addToCart(product)) }>     Thêm Vào Giỏ Hàng   </Link>
                                                 </div>
                                             </div>
                                         </div>

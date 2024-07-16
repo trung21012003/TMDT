@@ -10,14 +10,22 @@ import Stream from "./Components/Stream";
 import "./Components/i18n/i18n"
 import Game from "./Components/Game";
 import Cart from "./Components/Cart";
-import {Component} from "react";
+import React, {Component, useEffect, useState} from "react";
 import Checkout from "./Components/Checkout";
 import PaymentSuccess from "./Components/PaymentSuccess";
+import Loading from "./Components/Loading";
 
 
 
 
 function App() {
+    const [loading, setLoading] = useState(true)
+    useEffect(() => {
+        setTimeout(() => setLoading(false), 300)
+    }, [])
+    if (loading) {
+        return <Loading/>
+    }
   return (
 
           <BrowserRouter>
@@ -33,6 +41,8 @@ function App() {
                   <Route path="/games" element={<Game />} />
                   <Route path="/cart" element={<Cart />} />
                   <Route path="/checkout" element={<Checkout />} />
+                  <Route path="/paymentsuccess" element={<PaymentSuccess />} />
+
               </Routes>
 
           </BrowserRouter>
