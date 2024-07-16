@@ -199,4 +199,174 @@ export const  productList = [
         price: 30,
         bought: "5.3M"
     },
+    // ------------
+    {
+        name: "Gói nạp chậm",
+        type: "Steam-X",
+        id: 16,
+        image: "the50.png",
+        price: 57,
+        bought: "5.3M"
+    },
+    {
+        name: "Batman: Arkham City",
+        type: "Steam-X",
+        id: 21,
+        image: "man.png",
+        price: 90,
+        bought: "5M"
+    },
+
+    {
+        name: "Minecraft",
+        type: "Steam-X",
+        id: 26,
+        image: "minicrapt.png",
+        price: 97,
+        bought: "4M"
+    },
+    {
+        name: "Escape from Tarkov",
+        type: "Steam-X",
+        id: 27,
+        image: "batman.png",
+        price: 96,
+        bought: "4.4M"
+    },
+    {
+        name: "Wukong Digital",
+        type: "Steam-X",
+        id: 28,
+        image: "wukong.png",
+        price: 90,
+        bought: "5M"
+    },
+    {
+        name: "Thẻ PlayStation",
+        type: "Steam-X",
+        id: 29,
+        image: "the50.png",
+        price: 91,
+        bought: "3.2M"
+    },
+    {
+        name: "Dragon's Dogma 2",
+        type: "Steam-X",
+        id: 30,
+        image: "drogon.png",
+        price: 92,
+        bought: "3.5M"
+    },
+    {
+        name: "Battlefield 1 ",
+        type: "Steam-X",
+        id: 32,
+        image: "battle.png",
+        price: 90,
+        bought: "5.3M"
+    },
+    {
+        name: "Battlefield 3™",
+        type: "Steam-X",
+        id: 33,
+        image: "battle3.png",
+        price: 94,
+        bought: "5M"
+    },
+    {
+        name: "Anthem™ Legion",
+        type: "Steam-X",
+        id: 34,
+        image: "anthem.png",
+        price: 96,
+        bought: "4M"
+    },
+    {
+        name: "FIFA 21 (Origin)",
+        type: "Steam-X",
+        id: 35,
+        image: "fc7.jpg",
+        price: 97,
+        bought: "4.4M"
+    },
+    {
+        name: "Battlefield 1",
+        type: "Steam-X",
+        id: 36,
+        image: "battle1.png",
+        price:89,
+        bought: "10M"
+    },
+    {
+        name: "FIFA 20 (FF20)",
+        type: "Steam-X",
+        id: 38,
+        image: "fifa.png",
+        price: 79,
+        bought: "4.4M"
+    },
+    {
+        name: "The Sims 4 ",
+        type: "Steam-X",
+        id: 39,
+        image: "sims4.png",
+        price: 95,
+        bought: "2.3M"
+    },
+    {
+        name: "Gift Card 20$",
+        type: "Steam-X",
+        id: 40,
+        image: "blizass4.png",
+        price: 50,
+        bought: "3.2M"
+    },
+    {
+        name: " Gift Card 50$",
+        type: "Steam-X",
+        id: 41,
+        image: "blizass50.png",
+        price: 92,
+        bought: "3.5M"
+    },
+    {
+        name: "Diablo IV ",
+        type: "Steam-X",
+        id: 42,
+        image: "diablo.png",
+        price: 93,
+        bought: "10M"
+    },
+    {
+        name: "Diablo IV-Ultimate",
+        type: "Steam-X",
+        id: 43,
+        image: "diablolimit.png",
+        price: 99,
+        bought: "2.3M"
+    },
+    {
+        name: "Call of Duty",
+        type: "Steam-X",
+        id: 45,
+        image: "mafia.png",
+        price: 92,
+        bought: "3.5M"
+    },
+    {
+        name: "Vanguard",
+        type: "Steam-X",
+        id: 46,
+        image: "vanguage.png",
+        price: 90,
+        bought: "5.3M"
+    },
+    {
+        name: "Diablo® II",
+        type: "Steam-X",
+        id: 47,
+        image: "ghost.png",
+        price: 91,
+        bought: "4.4M"
+    }
 ]

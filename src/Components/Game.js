@@ -71,7 +71,7 @@ export default function Game() {
                             <div className="most-popular">
                                 <div className="row">
                                     <div className="heading-section">
-                                        <h4><em>Chọn Trò Chơi Trong Muốn Của Bạn</em>!</h4>
+                                        <h4><em>Chọn Trò Chơi Mong Muốn Của Bạn</em>!</h4>
                                     </div>
                                     <div className="col-4">
                                         <div className="search-input2">

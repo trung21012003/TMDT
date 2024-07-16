@@ -25,8 +25,8 @@ export default function ListGame({ items }) {
 
             {items.map((product, index) => (
 
-                    <div className="item col-lg-3 col-sm-6" id={styles.item}  key={product.id}>
-                        <img style={{ width: "249px" ,height: "200px"}} src={require(`./assets/images/${product.image}`)} alt="" />
+                    <div className="item col-lg-3 col-sm-6" id={styles.item}  key={product.id} style={{marginLeft:"70px"}}>
+                        <img style={{ width: "250px" ,height: "200px"}} src={require(`./assets/images/${product.image}`)} alt="" />
                         <h4>{product.name}<br/><span className={styles.name}>{product.type}</span></h4>
                         <ul>
                             <li><i className="fa fa-star"></i> {product.price}$</li>
@@ -41,13 +41,7 @@ export default function ListGame({ items }) {
                                     dispatch(addToCart(product));
                                     showSuccess();
 
-                                }}><i className="fa fa-cart-plus">
-
-                                }}><i
-
-                                    className="fa fa-cart-plus">
-
-                                </i>
+                                }}><i className="fa fa-cart-plus" />
                                 </button>
                             </div>
 
