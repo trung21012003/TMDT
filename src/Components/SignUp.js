@@ -117,7 +117,11 @@ export default function SignUp() {
                                 <div className="col-md-4">
                                     <label htmlFor="inputState" className="form-label">Gender</label>
                                     <select id="inputState" className="form-select"  {...register("gender")}>
+
                                         <option disabled >Chọn giới tính</option>
+
+                                        <option disabled value="">Chọn giới tính</option>
+
                                         <option value="Male">Nam</option>
                                         <option value="Famale">Nữ</option>
                                     </select>

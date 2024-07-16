@@ -85,7 +85,11 @@ export default function Details(){
                                             </div>
                                             <div className="col-lg-12">
                                                 <div className="main-border-button">
+
                                                     <Link to="/cart" onClick={() => dispatch(addToCart(product)) }>     Thêm Vào Giỏ Hàng   </Link>
+
+                                                    <a href="#">Download Fortnite Now!</a>
+
                                                 </div>
                                             </div>
                                         </div>
