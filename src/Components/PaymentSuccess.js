@@ -1,7 +1,10 @@
 
 import "./assets/css/paymentsuccess.css"
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
+import {useSelector} from "react-redux";
 export default function PaymentSuccess(){
+    const user111 = useSelector((state) => state.auth.user);
+
     return (
         <div className="container-son">
             <div className="success-icon">
@@ -22,7 +25,8 @@ export default function PaymentSuccess(){
             </div>
             <h1>Thanh toán thành công!</h1>
             <p>
-                Cảm ơn bạn đã đặt hàng. Đơn hàng của bạn đã được thanh toán thành công.
+                Cảm ơn {user111.user.email} đã đặt hàng. Tất cả trò chơi của bạn đã sẽ được gửi về Email của bạn.
+
             </p>
             <Link to="/" className="active">
             <button>Trở về trang chủ</button>

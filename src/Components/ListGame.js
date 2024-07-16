@@ -40,9 +40,13 @@ export default function ListGame({ items }) {
                                 <button label="Success" severity="success" onClick={() => {
                                     dispatch(addToCart(product));
                                     showSuccess();
+
+                                }}><i className="fa fa-cart-plus">
+
                                 }}><i
 
                                     className="fa fa-cart-plus">
+
                                 </i>
                                 </button>
                             </div>

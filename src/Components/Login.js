@@ -24,7 +24,8 @@ export default function Login() {
         });
         console.log(data);
         if(foundUser != null){
-            dispatch(login({isLoggedIn: true, user: foundUser}));
+            dispatch(login({user: foundUser}));
+
             navigate("/");
 
         }else {

@@ -41,6 +41,8 @@ function App() {
                   <Route path="/games" element={<Game />} />
                   <Route path="/cart" element={<Cart />} />
                   <Route path="/checkout" element={<Checkout />} />
+                  <Route path="/paymentsuccess" element={<PaymentSuccess />} />
+
               </Routes>
 
           </BrowserRouter>

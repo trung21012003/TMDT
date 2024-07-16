@@ -6,12 +6,11 @@ import 'font-awesome/css/font-awesome.min.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import {useSelector, useDispatch} from "react-redux";
 import {Link} from "react-router-dom";
-import {decreaseToProduct, deleteToCart, increaseToProduct, totalPriceAllProduct} from "../Reducers/CartReducer";
+import { deleteToCart} from "../Reducers/CartReducer";
 
 export default function Cart(){
     const Carts = useSelector(state => state.cart.carts);
     console.log(Carts);
-
     const dispatch = useDispatch();
     const totalPrice =useSelector(state => state.cart.totalPrice);
     console.log(totalPrice);
@@ -26,7 +25,7 @@ export default function Cart(){
                         <div className="col-md-8">
                             <div className="card mb-4">
                                 <div className="card-header py-3">
-                                    <h5 className="mb-0">Có {Carts.length} Sản Phẩm  </h5>
+                                    <h5 className="mb-0" style={{color: "black"}}>Có {Carts.length} Sản Phẩm  </h5>
                                 </div>
                                 <div className="card-body">
                                         {Carts.map( (product) => (
@@ -62,24 +61,16 @@ export default function Cart(){
                                             <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
 
                                                 <div className="d-flex mb-4" style={{maxWidth: "300px"}}>
-                                                    <button onClick={()=>dispatch(decreaseToProduct(product)) }
-                                                        className="btn btn-primary px-3 me-2"
-                                                        >
-                                                        <i className="fa fa-minus"></i>
-                                                    </button>
+
 
                                                     <div className="form-outline">
-                                                        <input id={product.id} min="0" name="quantity" value={parseInt(product.quantity)}
+                                                        <input id={product.id} min="0" name="quantity" defaultValue={parseInt(product.quantity)}
+                                                               disabled={true}
                                                                type="number"
                                                                className="form-control"/>
                                                         <label className="form-label" htmlFor={product.id}>Quantity</label>
                                                     </div>
 
-                                                    <button
-                                                        className="btn btn-primary px-3 ms-2"
-                                                        onClick={() => dispatch(increaseToProduct(product)) } >
-                                                        <i className="fa fa-plus"></i>
-                                                    </button>
                                                 </div>
 
 
@@ -96,23 +87,7 @@ export default function Cart(){
 
                                 </div>
                             </div>
-                            <div className="card mb-4 mb-lg-0">
-                                <div className="card-body">
-                                    <p><strong>We accept</strong></p>
-                                    <img className="me-2" width="45px" height="45px"
-                                         src={require("./assets/images/featured-02.jpg")}
-                                         alt="Visa"/>
-                                    <img className="me-2" width="45px" height="45px"
-                                         src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
-                                         alt="American Express"/>
-                                    <img className="me-2" width="45px" height="45px"
-                                         src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
-                                         alt="Mastercard"/>
-                                    <img className="me-2" width="45px" height="45px"
-                                         src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocom…includes/gateways/paypal/assets/images/paypal.png"
-                                         alt="PayPal acceptance mark"/>
-                                </div>
-                            </div>
+
                         </div>
                         <div className="col-md-4">
                             <div className="card mb-4">
@@ -123,19 +98,15 @@ export default function Cart(){
                                     <ul className="list-group list-group-flush">
                                         <li
                                             className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                                            Products
+                                            Trò Chơi
                                             <span>${totalPrice}</span>
-                                        </li>
-                                        <li className="list-group-item d-flex justify-content-between align-items-center px-0">
-                                            Shipping
-                                            <span>Gratis</span>
                                         </li>
                                         <li
                                             className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
                                             <div>
-                                                <strong>Total amount</strong>
+                                                <strong>Tổng Tiền</strong>
                                                 <strong>
-                                                    <p className="mb-0">(including VAT)</p>
+                                                    <p className="mb-0">(Thuế VAT)</p>
                                                 </strong>
                                             </div>
                                             <span><strong>${totalPrice}</strong></span>
