@@ -25,7 +25,6 @@ export default function Login() {
         console.log(data);
         if(foundUser != null){
             dispatch(login({user: foundUser}));
-
             navigate("/");
 
         }else {
@@ -65,7 +64,18 @@ export default function Login() {
                     <button style={{marginLeft: "90px"}} type="button" className="btn btn-outline-info">{t("register")}
                     </button>
                 </Link>
-
+                <div style={{display: "flex"}}>
+                    <Link to="/" className="active">
+                        <button style={{marginLeft: "1px", marginTop: "10px", width: "110px"}} type="button"
+                                className="btn btn-outline-light">Trang chủ
+                        </button>
+                    </Link>
+                    <Link to="/forgotpassword" className="active">
+                        <button style={{marginLeft: "30px", marginTop: "10px", width: "150px"}} type="button"
+                                className="btn btn-outline-warning">Quên mật khẩu
+                        </button>
+                    </Link>
+                </div>
             </form>
         </div>
 

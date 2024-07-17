@@ -14,7 +14,6 @@ export default function Cart(){
     const dispatch = useDispatch();
     const totalPrice =useSelector(state => state.cart.totalPrice);
     console.log(totalPrice);
-
     return (
         <div className="container">
 

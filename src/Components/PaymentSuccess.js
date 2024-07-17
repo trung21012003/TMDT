@@ -29,7 +29,7 @@ export default function PaymentSuccess(){
 
             </p>
             <Link to="/" className="active">
-            <button>Trở về trang chủ</button>
+                <button>Trở về trang chủ</button>
             </Link>
         </div>
     )
