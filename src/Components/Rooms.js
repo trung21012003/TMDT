@@ -15,34 +15,72 @@ import React, {Component, useEffect, useState, useMemo, useRef} from "react";
     import ReactPlayer from "react-player";
     import {useDispatch, useSelector} from "react-redux";
     import {useTranslation} from "react-i18next";
-
-
     function JoinScreen({ getMeetingAndToken }) {
+
         const [meetingId, setMeetingId] = useState(null);
+        const meetings = useSelector((state) => state.room.rooms);
+        const toast = useRef(null);
+        const showError = () => {
+            toast.current.show({severity:'error', summary: 'Error', detail:'Vui Lòng Điền Id Room', life: 1000});
+        }
+        const showWarn = () => {
+            toast.current.show({severity:'warn', summary: 'Warning', detail:'Không Có Room Này', life: 1000});
+        }
         const onClick = async () => {
+            if (meetingId) { // Kiểm tra xem meetingId đã được nhập chưa
+                const isMeetingIdExist = (meetings, meetingId) => {
+                    // Sử dụng Array.find để tìm kiếm phần tử với id là meetingId
+                    const existingMeeting = meetings.find(room => room.id === meetingId);
+                    // Nếu existingMeeting khác undefined, tức là meetingId đã tồn tại trong state
+                    return !!existingMeeting;
+                };
+                if(isMeetingIdExist(meetings, meetingId)) {
+                    await getMeetingAndToken(meetingId);
+                }else {
+                    showWarn();
+                }
+            } else {
+                // Hiển thị thông báo lỗi hoặc xử lý khác nếu meetingId chưa được nhập
+                showError();
+            }
+        };
+
+        const onClickCreate = async () => {
             await getMeetingAndToken(meetingId);
         };
         return (
             <div>
+                <div>
+                    <Toast ref={toast}/>
+                </div>
                 <input
-                    type="text"
-                    placeholder="Enter Meeting Id"
+                    type="text" style={{outline: "none" , padding: "10px", "border-radius": "10px"}}
+                    placeholder="Nhập Room ID"
                     onChange={(e) => {
                         setMeetingId(e.target.value);
                     }}
                 />
-                <button onClick={onClick}>Join</button>
-                {" or "}
-                <button onClick={onClick}>Create Meeting</button>
+                <button onClick={onClick}>Tham Gia</button>
+                <span>
+                    {" Hoặc "}
+                </span>
+
+                <button onClick={onClickCreate}>Tạo Room mới</button>
             </div>
         );
     }
 
-            function ParticipantView(props) {
+function ParticipantView(props) {
         const micRef = useRef(null);
-        const { webcamStream, micStream, webcamOn, micOn, isLocal, displayName } =
+        const { webcamStream, micStream, webcamOn, micOn, isLocal,screenShareOn ,screenShareStream, displayName } =
             useParticipant(props.participantId);
-
+        const mediaStream = useMemo(() => {
+            if (screenShareOn) {
+                const mediaStream = new MediaStream();
+                mediaStream.addTrack(screenShareStream.track);
+                return mediaStream;
+            }
+        }, [screenShareStream, screenShareOn]);
         const videoStream = useMemo(() => {
             if (webcamOn && webcamStream) {
                 const mediaStream = new MediaStream();
@@ -75,8 +113,10 @@ import React, {Component, useEffect, useState, useMemo, useRef} from "react";
                 background: "#1f2122",
                 display: "flex",
             }}>
+
+
                 <p>
-                    Participant: {displayName} | Webcam: {webcamOn ? "ON" : "OFF"} | Mic:{" "}
+                    Người Tham Gia: {displayName} | Camera: {webcamOn ? "ON" : "OFF"} | Mic:{" "}
                     {micOn ? "ON" : "OFF"}
                 </p>
                 <audio ref={micRef} autoPlay playsInline muted={isLocal} />
@@ -90,7 +130,7 @@ import React, {Component, useEffect, useState, useMemo, useRef} from "react";
                         muted={true}
                         playing={true}
                         //
-                        url={videoStream}
+                        url={screenShareOn ? mediaStream : videoStream}
                         //
                         height={"380px"}
                         width={"400px"}
@@ -107,10 +147,12 @@ import React, {Component, useEffect, useState, useMemo, useRef} from "react";
         const { leave, toggleMic, toggleWebcam, toggleScreenShare,  enableScreenShare} = useMeeting();
         return (
             <div>
-                <button onClick={() => leave()}>Leave</button>
-                <button onClick={() => toggleMic()}>toggleMic</button>
-                <button onClick={() => toggleWebcam()}>toggleWebcam</button>
-                <button onClick={() => toggleScreenShare()}>toggleScreenShare</button>
+                <button style={{marginLeft: "5px"}} onClick={() => leave()}>Rời Khỏi Phòng</button>
+
+                <button style={{marginLeft: "5px"}} onClick={() => toggleMic()}>Tắt/Bật Mic</button>
+                <button  style={{marginLeft: "5px"}} onClick={() => toggleWebcam()}>Tắt/Bật Camera</button>
+                <button style={{marginLeft: "5px"}} onClick={() => toggleScreenShare()}>Tắt/Bật Chia Sẽ Màn Hình</button>
+                
             </div>
         );
     }
@@ -203,7 +245,7 @@ function CopyButton() {
         return (
             <div className="container">
                 <h3>Meeting Id: {props.meetingId}</h3>
-                {isMeetingJoined ?  (
+                {isMeetingJoined ? (
                     <div>
                         <Controls/>
 
@@ -215,13 +257,17 @@ function CopyButton() {
                         ))}
                     </div>
                 ) : (
-                    <button onClick={join}>Join</button>
-                )}
-            </div>
+                    <div>
+                    <button onClick={join}>Tham Gia Ngay</button>
+                    <button onClick={() => window.location.reload()}>Hủy</button>
+                    </div>
         )
     }
+    </div>
+    )
+    }
 
-    function MeetingContainer({ addMeeting }) {
+function MeetingContainer({ addMeeting }) {
         const user111 = useSelector((state) => state.auth);
 
         const [meetingId, setMeetingId] = useState(null);

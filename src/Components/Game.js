@@ -78,7 +78,7 @@ export default function Game() {
                                     <div className="col-4">
                                         <div className="search-input2">
                                             <form id='search2' action="#">
-                                                <input type="text" placeholder="Type Something" id='searchText2'
+                                                <input type="text" placeholder="Nhập Tên Game..." id='searchText2'
                                                        onChange={handleInputChange}
                                                        name="searchKeyword"
                                                 />
