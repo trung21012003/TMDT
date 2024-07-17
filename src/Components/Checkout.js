@@ -7,6 +7,7 @@ import Footer from "./Footer";
 
 import {useEffect, useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
+import BtnCheckOut from "./BtnCheckOut";
 export default function Checkout() {
     const Carts = useSelector(state => state.cart.carts);
     const totalPrice =useSelector(state => state.cart.totalPrice);
@@ -50,11 +51,7 @@ export default function Checkout() {
                             <div className="col-lg-8 col-md-6">
                                 <div className="row">
                                     <div className="col-lg-12">
-                                        <div className="checkout__input">
-                                            <p>Name<span>*</span></p>
-                                            <input type="text"
-                                                   onChange={(event) => setEmail(event.target.value)}/>
-                                        </div>
+
                                         <div className="checkout__input">
                                             <p>Email<span>*</span></p>
                                             <input type="text" value={email}
@@ -83,18 +80,6 @@ export default function Checkout() {
                                     </div>
                                 </div>
                                 <div className="checkout__input">
-                                    <p>Order notes<span>*</span></p>
-                                    <input type="text"
-                                           placeholder="Notes about your order, e.g. special notes for delivery."/>
-                                </div>
-                                <div className="checkout__input__checkbox">
-                                    <label>
-                                        Ship to a different address?
-                                        <input type="checkbox" id="diff-acc"/>
-                                        <span className="checkmark"></span>
-                                    </label>
-                                </div>
-                                <div className="checkout__input">
                                     <p>Account Password<span>*</span></p>
                                     <input type="password" onChange={(e) => setPassword(e.target.value)}/>
                                 </div>
@@ -113,39 +98,9 @@ export default function Checkout() {
                                         {Carts.map((product) => (
                                             <li key={product.id}> {product.name} <span>$ {product.price}</span></li>
                                         ))}
-                                    <p>Sau Khi Thanh Toán Thành Công Bạn Sẽ Nhận Được Link Dành Cho Game Của Bạn</p>
-
-                                    <button type="submit"  className="site-btn">ĐẶT HÀNG</button>
-                                        <li>Vegetable’s Package <span>$75.99</span></li>
-                                        <li>Fresh Vegetable <span>$151.99</span></li>
-                                        <li>Organic Bananas <span>$53.99</span></li>
                                     </ul>
-                                    <div className="checkout__order__subtotal">Subtotal <span>$750.99</span></div>
-                                    <div className="checkout__order__total">Total <span>$750.99</span></div>
-                                    <div className="checkout__input__checkbox">
-                                        <label>
-                                            Create an account?
-                                            <input type="checkbox" id="acc-or"/>
-                                                <span className="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do eiusmod tempor incididunt
-                                        ut labore et dolore magna aliqua.</p>
-                                    <div className="checkout__input__checkbox">
-                                        <label>
-                                            Check Payment
-                                            <input type="checkbox" id="payment"/>
-                                                <span className="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <div className="checkout__input__checkbox">
-                                        <label>
-                                            Paypal
-                                            <input type="checkbox" id="paypal"/>
-                                                <span className="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <button type="submit" className="site-btn">ĐẶT HÀNG</button>
+                                    <p>Sau Khi Thanh Toán Thành Công Bạn Sẽ Nhận Được Link Dành Cho Game Của Bạn</p>
+                                    <BtnCheckOut />
 
                                 </div>
                             </div>

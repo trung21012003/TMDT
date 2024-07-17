@@ -39,7 +39,7 @@ export default function Home() {
                                     </div>
                                 </div>
                             </div>
-                            <LibraryGame/>
+
                             <div className="most-popular">
                                 <div className="row">
                                     <div className="col-lg-12">
@@ -50,6 +50,7 @@ export default function Home() {
                                     </div>
                                 </div>
                             </div>
+                            <LibraryGame/>
                         </div>
                     </div>
                     <Footer/>
