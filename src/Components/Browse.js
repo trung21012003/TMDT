@@ -34,20 +34,20 @@ export default function  Browse () {
                                         </div>
                                         <ul>
                                             <li>
-                                                <img src={require("./assets/images/game-01.jpg")} alt=""
+                                                <img style={{width:"80px", height :"80px"}} src={require("./assets/images/lol1.jpg")} alt=""
                                                      className="templatemo-item"/>
-                                                <h4>Fortnite</h4>
-                                                <h6>Sandbox</h6>
+                                                <h4>LoL</h4>
+                                                <h6>VNG</h6>
                                                 <span><i className="fa fa-star"
                                                          style={{color: "yellow"}}></i> 4.9</span>
                                                 <span><i className="fa fa-download"
                                                          style={{color: "#ec6090"}}></i> 2.2M</span>
                                                 <div className="download">
-                                                    <a href="#"><i className="fa fa-download"></i></a>
+                                                    <a href="games"><i className="fa fa-download"></i></a>
                                                 </div>
                                             </li>
                                             <li>
-                                                <img src={require("./assets/images/game-02.jpg")} alt=""
+                                                <img style={{width:"80px", height :"80px"}} src={require("./assets/images/csgo2.png")} alt=""
                                                      className="templatemo-item"/>
                                                 <h4>CS-GO</h4>
                                                 <h6>Legendary</h6>
@@ -56,20 +56,20 @@ export default function  Browse () {
                                                 <span><i className="fa fa-download"
                                                          style={{color: "#ec6090"}}></i> 2.2M</span>
                                                 <div className="download">
-                                                    <a href="#"><i className="fa fa-download"></i></a>
+                                                    <a href="games"><i className="fa fa-download"></i></a>
                                                 </div>
                                             </li>
                                             <li>
-                                                <img src={require("./assets/images/game-03.jpg")} alt=""
+                                                <img style={{width:"80px", height :"80px"}} src={require("./assets/images/dota1.jpg")} alt=""
                                                      className="templatemo-item"/>
-                                                <h4>PugG</h4>
+                                                <h4>Dota 2</h4>
                                                 <h6>Battle Royale</h6>
                                                 <span><i className="fa fa-star"
                                                          style={{color: "yellow"}}></i> 4.9</span>
                                                 <span><i className="fa fa-download"
                                                          style={{color: "#ec6090"}}></i> 2.2M</span>
                                                 <div className="download">
-                                                    <a href="#"><i className="fa fa-download"></i></a>
+                                                    <a href="games"><i className="fa fa-download"></i></a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -88,12 +88,11 @@ export default function  Browse () {
                                         <div className="col-lg-4">
                                             <div className="item">
                                                 <div className="icon">
-                                                    <img src={require("./assets/images/service-01.jpg")} alt=""
-                                                         style={{maxWidth: "60px", borderRadius: "50%"}}/>
+                                                    <img  src={require("./assets/images/service-01.jpg")} alt=""
+                                                         style={{maxWidth: "60px", borderRadius: "50%" }}/>
                                                 </div>
                                                 <h4>{t("goToProfile")}</h4>
-                                                <p>Cyborg Gaming is free HTML CSS website template provided by
-                                                    TemplateMo. This is Bootstrap v5.2.0 layout.</p>
+                                                <p>{t("prof")}</p>
                                             </div>
                                         </div>
                                         <div className="col-lg-4">
@@ -103,9 +102,7 @@ export default function  Browse () {
                                                          style={{maxWidth: "60px", borderRadius: "50%"}}/>
                                                 </div>
                                                 <h4>{t("liveStream")}</h4>
-                                                <p>If you wish to support us, you can make a <a
-                                                    href="https://paypal.me/templatemo" target="_blank">small
-                                                    contribution via PayPal</a> to info [at] templatemo.com</p>
+                                                <p>{t("stream1")}</p>
                                             </div>
                                         </div>
                                         <div className="col-lg-4">
@@ -115,13 +112,12 @@ export default function  Browse () {
                                                          style={{maxWidth: "60px", borderRadius: "50%"}}/>
                                                 </div>
                                                 <h4>{t("youAreLive")}</h4>
-                                                <p>You are not allowed to redistribute this template's downloadable ZIP
-                                                    file on any other template collection website.</p>
+                                                <p>{t("stream2")}</p>
                                             </div>
                                         </div>
                                         <div className="col-lg-12">
                                             <div className="main-button">
-                                                <a href="profile.html">{t("goToProfile")}</a>
+                                                <a href="">{t("goToProfile")}</a>
                                             </div>
                                         </div>
                                     </div>

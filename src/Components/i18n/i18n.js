@@ -26,7 +26,7 @@ const resources = {
             bought:"Boughted",
             streamer:"Streamers",
             follow: "Follow",
-            chossesGame:"Choose your want game",
+            chosseGame:"Choose your want game",
             allTypes:"All Types",
             details:" Detail",
             addToCart:"Add To Cart",
@@ -46,7 +46,13 @@ const resources = {
             horrified:"HORRIFIED",
             simulation:"SIMULATION",
             racing:"RACING",
-            fighting:"FIGHTING"
+            fighting:"FIGHTING",
+            prof: "Welcome to T-Games, the world's largest provider of licensed and free games.",
+            stream1:"T-Games caters to your entertainment needs by accessing our premier Live Stream platform.",
+            stream2:"On the other hand, you can also become a streamer, connect with the gaming community, and indulge your passion for the game of your choice.",
+            room:"Room Stream",
+            start:"Begin at:",
+            price:"PRICE"
         }
     },
     vi: {
@@ -54,8 +60,8 @@ const resources = {
             home: "Trang chủ",
             features:"Nổi bật",
             game:"Trò chơi",
-            download:"Tải về",
-            top:"Cao",
+            download:"tải về",
+            top: "Lượt lớn",
             viewAllGame:"Xem tất cả trò chơi",
             howToStartYour:"Bắt đầu như nào để",
             liveStream:"Phát trực tiếp",
@@ -72,7 +78,7 @@ const resources = {
             bought:"Đã Mua",
             streamer:"Người phát trực tiếp",
             follow: "Theo dõi",
-            chossesGame:"Chọn game bạn muốn",
+            chosseGame:"Chọn game bạn muốn",
             allTypes:"Tất cả loại trò chơi",
             details:" Chi tiết",
             addToCart:"Thêm vào giỏ hàng",
@@ -92,7 +98,13 @@ const resources = {
             horrified:"KINH DỊ",
             simulation:"ĐƠN GIẢN",
             racing:"TỐC ĐỘ",
-            fighting:"ĐỐI KHÁNG"
+            fighting:"ĐỐI KHÁNG",
+            prof: "Chào mừng bạn đến với T-Games, nơi cung cấp những tựa game bản quyền và game miễn phí lớn nhất thế giới.",
+            stream1:"T-Games đáp ứng nhu cầu giải trí của bạn bằng cách truy cập nền tảng Live Stream hàng đầu của chúng tôi.",
+            stream2:"Mặt khác bạn cũng có thể trở thành 1 streamer, kết nối cộng đồng game thủ, thỏa sức đam mê với tựa game bạn chọn.",
+            room:"Phòng Stream",
+            start:"Tạo lúc:",
+            price:"Giá tiền"
         }
     }
 };

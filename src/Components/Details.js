@@ -88,7 +88,7 @@ export default function Details(){
 
                                                     <Link to="/cart" onClick={() => dispatch(addToCart(product)) }>     Thêm Vào Giỏ Hàng   </Link>
 
-                                                    <a href="#">Download Fortnite Now!</a>
+
 
                                                 </div>
                                             </div>
@@ -106,7 +106,7 @@ export default function Details(){
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="item">
-                                        <img src={require("./assets/images/game-01.jpg")} alt="" className="templatemo-item" />
+                                        <img src={require("./assets/images/dota1.jpg")} alt="" className="templatemo-item" />
                                             <h4>Dota 2</h4><span>Sandbox</span>
                                             <ul>
                                                 <li><i className="fa fa-star"></i> 4.8</li>
@@ -116,8 +116,8 @@ export default function Details(){
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="item">
-                                        <img src={require("./assets/images/game-02.jpg")} alt="" className="templatemo-item" />
-                                            <h4>Dota 2</h4><span>Sandbox</span>
+                                        <img src={require("./assets/images/lol1.jpg")} alt="" className="templatemo-item" />
+                                            <h4>LOL</h4><span>VNG</span>
                                             <ul>
                                                 <li><i className="fa fa-star"></i> 4.8</li>
                                                 <li><i className="fa fa-download"></i> 2.3M</li>
@@ -126,8 +126,8 @@ export default function Details(){
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="item">
-                                        <img src={require("./assets/images/game-03.jpg")} alt="" className="templatemo-item" />
-                                            <h4>Dota 2</h4><span>Sandbox</span>
+                                        <img src={require("./assets/images/tft1.jpg")} alt="" className="templatemo-item" />
+                                            <h4>TFT</h4><span>VNG</span>
                                             <ul>
                                                 <li><i className="fa fa-star"></i> 4.8</li>
                                                 <li><i className="fa fa-download"></i> 2.3M</li>
@@ -136,8 +136,8 @@ export default function Details(){
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="item">
-                                        <img src={require("./assets/images/game-02.jpg")} alt="" className="templatemo-item" />
-                                            <h4>Dota 2</h4><span>Sandbox</span>
+                                        <img src={require("./assets/images/fc1.jpg")} alt="" className="templatemo-item" />
+                                            <h4>FC Online</h4><span>Garena</span>
                                             <ul>
                                                 <li><i className="fa fa-star"></i> 4.8</li>
                                                 <li><i className="fa fa-download"></i> 2.3M</li>
@@ -146,8 +146,8 @@ export default function Details(){
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="item">
-                                        <img src={require("./assets/images/game-03.jpg")} alt="" className="templatemo-item" />
-                                            <h4>Dota 2</h4><span>Sandbox</span>
+                                        <img src={require("./assets/images/apex2.jpg")} alt="" className="templatemo-item" />
+                                            <h4>Apex 2</h4><span>Sandbox</span>
                                             <ul>
                                                 <li><i className="fa fa-star"></i> 4.8</li>
                                                 <li><i className="fa fa-download"></i> 2.3M</li>
@@ -156,8 +156,8 @@ export default function Details(){
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="item">
-                                        <img src={require("./assets/images/game-01.jpg")} alt="" className="templatemo-item" />
-                                            <h4>Dota 2</h4><span>Sandbox</span>
+                                        <img src={require("./assets/images/got1.jpg")} alt="" className="templatemo-item" />
+                                            <h4>getting Over It</h4><span>Sandbox</span>
                                             <ul>
                                                 <li><i className="fa fa-star"></i> 4.8</li>
                                                 <li><i className="fa fa-download"></i> 2.3M</li>

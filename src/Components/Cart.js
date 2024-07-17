@@ -54,14 +54,9 @@ export default function Cart(){
                                                     title="Remove item" onClick={ () => dispatch(deleteToCart(product)) }>
                                                     <i className="fa fa-trash"></i>
                                                 </button>
-
                                             </div>
-
                                             <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
-
                                                 <div className="d-flex mb-4" style={{maxWidth: "300px"}}>
-
-
                                                     <div className="form-outline">
                                                         <input id={product.id} min="0" name="quantity" defaultValue={parseInt(product.quantity)}
                                                                disabled={true}
@@ -69,29 +64,22 @@ export default function Cart(){
                                                                className="form-control"/>
                                                         <label className="form-label" htmlFor={product.id}>Quantity</label>
                                                     </div>
-
                                                 </div>
-
-
                                                 <p className="text-start text-md-center">
                                                     <strong>${product.price * product.quantity}</strong>
                                                 </p>
-
                                             </div>
                                         </div>
-
                                         <hr className="my-4"/>
                                         </div>
                                             )) }
-
                                 </div>
                             </div>
-
                         </div>
                         <div className="col-md-4">
                             <div className="card mb-4">
                                 <div className="card-header py-3">
-                                    <h5 className="mb-0">Summary</h5>
+                                    <h5 style={{color :"black"}} className="mb-0">Summary</h5>
                                 </div>
                                 <div className="card-body">
                                     <ul className="list-group list-group-flush">
@@ -111,14 +99,11 @@ export default function Cart(){
                                             <span><strong>${totalPrice}</strong></span>
                                         </li>
                                     </ul>
-
-
                                         <button  className={Carts.length === 0 ? 'btn btn-primary btn-lg btn-block disabled ' : 'btn btn-primary btn-lg btn-block'
                                             }>
                                             <Link
                                                 type="button"
                                                 to="/checkout"
-
                                             >
                                                 Go to checkout
                                             </Link>

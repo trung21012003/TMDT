@@ -30,44 +30,37 @@ export default function Stream(){
                                     <ul>
                                         <li>
                                             <span>01</span>
-                                            <img src={require("./assets/images/avatar-01.jpg")} alt="" style={{maxWidth: "46px", borderRadius: "50%", marginRight: "15px" }}/>
-                                                <h6><i className="fa fa-check"></i> LahutaM</h6>
+                                            <img style = {{width: "46px",height : "46px"}} src={require("./assets/images/domixi1.jpg")} alt="" style={{ width: "46px",height : "46px",maxWidth: "46px", borderRadius: "50%", marginRight: "15px" }}/>
+                                                <h6><i className="fa fa-check"></i> Mixi Gaming</h6>
                                                 <div className="main-button">
                                                     <a href="#">{t("follow")}</a>
                                                 </div>
                                         </li>
                                         <li>
                                             <span>02</span>
-                                            <img src={require("./assets/images/avatar-02.jpg")} alt="" style={{maxWidth: "46px", borderRadius: "50%", marginRight: "15px" }} />
-                                                <h6><i className="fa fa-check"></i> Kengan</h6>
+                                            <img src={require("./assets/images/3ga.jpg")} alt="" style={{ width: "46px",height : "46px", maxWidth: "46px", borderRadius: "50%", marginRight: "15px" }} />
+                                                <h6><i className="fa fa-check"></i> Thầy Giáo Ba</h6>
                                                 <div className="main-button">
                                                     <a href="#">{t("follow")}</a>
                                                 </div>
                                         </li>
                                         <li>
                                             <span>03</span>
-                                            <img src={require("./assets/images/avatar-03.jpg")} alt="" style={{maxWidth: "46px", borderRadius: "50%", marginRight: "15px" }} />
-                                                <h6><i className="fa fa-check"></i> Areluwa</h6>
+                                            <img  src={require("./assets/images/misthy.jpg")} alt="" style={{ width: "46px",height : "46px", maxWidth: "46px", borderRadius: "50%", marginRight: "15px" }} />
+                                                <h6><i className="fa fa-check"></i> Misthy</h6>
                                                 <div className="main-button">
                                                     <a href="#">{t("follow")}</a>
                                                 </div>
                                         </li>
                                         <li>
                                             <span>04</span>
-                                            <img src={require("./assets/images/avatar-04.jpg")} alt="" style={{maxWidth: "46px", borderRadius: "50%", marginRight: "15px" }} />
-                                                <h6><i className="fa fa-check"></i> Omeg</h6>
+                                            <img  src={require("./assets/images/pewpew.jpg")} alt="" style={{ width: "46px",height : "46px",maxWidth: "46px", borderRadius: "50%", marginRight: "15px" }} />
+                                                <h6><i className="fa fa-check"></i> PewPew</h6>
                                                 <div className="main-button">
                                                     <a href="#">{t("follow")}</a>
                                                 </div>
                                         </li>
-                                        <li>
-                                            <span>05</span>
-                                            <img src={require("./assets/images/avatar-01.jpg")} alt="" style={{maxWidth: "46px", borderRadius: "50%", marginRight: "15px" }} />
-                                                <h6><i className="fa fa-check"></i> GangTeam</h6>
-                                                <div className="main-button">
-                                                    <a href="#">{t("follow")}</a>
-                                                </div>
-                                        </li>
+
                                     </ul>
                                 </div>
                             </div>
