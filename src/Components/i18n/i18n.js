@@ -52,7 +52,8 @@ const resources = {
             stream2:"On the other hand, you can also become a streamer, connect with the gaming community, and indulge your passion for the game of your choice.",
             room:"Room Stream",
             start:"Begin at:",
-            price:"PRICE"
+            price:"PRICE",
+            valid:"Invalid email address",
         }
     },
     vi: {
@@ -104,7 +105,8 @@ const resources = {
             stream2:"Mặt khác bạn cũng có thể trở thành 1 streamer, kết nối cộng đồng game thủ, thỏa sức đam mê với tựa game bạn chọn.",
             room:"Phòng Stream",
             start:"Tạo lúc:",
-            price:"Giá tiền"
+            price:"Giá tiền",
+            valid:"E-mail bạn cung cấp không hợp lệ",
         }
     }
 };

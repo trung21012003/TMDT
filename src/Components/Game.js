@@ -95,7 +95,7 @@ export default function Game() {
                                                 <option value="Steam-X">Steam-X</option>
                                                 <option value="3">Type 3</option>
                                             </select>
-                                            
+
                                         </div>
 
                                     </div>
@@ -110,10 +110,8 @@ export default function Game() {
                                             <input className={data > 50 ? 'heigh' : 'less'} type="range" min="0"
                                                    max="100" step="5" value={data}
                                                    onChange={handleMaxPriceChange}/>
-
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                             <div className="most-popular">

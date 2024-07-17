@@ -1,3 +1,4 @@
+
 import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {addUser} from "../Reducers/UserReducer";
@@ -5,12 +6,15 @@ import {Link, useNavigate} from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import Header from "./Header"
 import styles from './module/login.module.css'
+import {useTranslation} from "react-i18next";
 export default function SignUp() {
     const { register, handleSubmit, watch,formState: { errors } } = useForm();
     const users = useSelector((state) => state.users );
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const passwordValue = watch('password');
+    const {i18n} = useTranslation()
+    const {t} =useTranslation();
     function onSubmit(data) {
         const lastUserId = users[users.length - 1].id;
         const email = data.email;
@@ -23,7 +27,7 @@ export default function SignUp() {
         const newId = lastUserId + 1;
         dispatch(addUser({id: newId, email, password, phone, address, city, gender, birthday}));
         navigate('/login');
-        }
+    }
 
     return (
         <div className="container">
@@ -38,6 +42,9 @@ export default function SignUp() {
                                         <i style={{fontSize: "20px", marginRight: "4px"}}
                                            className="fa fa-chevron-left"></i> Back to home
                                     </button>
+                                </Link>
+                                <Link to="/login" style={{display:"flex"}} className="active">
+
                                 </Link>
                                 <div className="col-md-6">
                                     <label htmlFor="inputEmail4" className="form-label">Email</label>
@@ -68,7 +75,7 @@ export default function SignUp() {
 
                                     />
                                     {errors.password && <span className={styles.span}
-                                                           style={{color: 'red'}}>{errors.password.message}</span>}
+                                                              style={{color: 'red'}}>{errors.password.message}</span>}
                                 </div>
                                 <div className="col-md-3">
                                     <label htmlFor="inputPassword4" className="form-label">Confirm Password</label>
@@ -112,21 +119,18 @@ export default function SignUp() {
                                 <div className="col-md-6">
                                     <label htmlFor="inputCity" className="form-label">City</label>
                                     <input type="text" className="form-control" id="inputCity" placeholder="Sydney"
-                                           />
+                                    />
                                 </div>
-                                <div className="col-md-4">
+                                <div className="col-md-3">
                                     <label htmlFor="inputState" className="form-label">Gender</label>
                                     <select id="inputState" className="form-select"  {...register("gender")}>
-
-                                        <option disabled >Chọn giới tính</option>
-
                                         <option disabled value="">Chọn giới tính</option>
 
                                         <option value="Male">Nam</option>
                                         <option value="Famale">Nữ</option>
                                     </select>
                                 </div>
-                                <div className="col-md-2">
+                                <div className="col-md-3">
                                     <label htmlFor="inputZip" className="form-label">Birthday</label>
                                     <input type="date" className="form-control" id="inputZip"
                                            {...register("birthday")}
@@ -138,7 +142,7 @@ export default function SignUp() {
                                                {...register("checkbox", {
                                                    required: "vui lòng xác nhận"
                                                })
-                                        } />
+                                               } />
                                         <label className="form-check-label" htmlFor="gridCheck"
                                                style={{color: "white"}}>
                                             Check me out
