@@ -41,7 +41,7 @@ export default function Stream(){
                                             <img src={require("./assets/images/3ga.jpg")} alt="" style={{ width: "46px",height : "46px", maxWidth: "46px", borderRadius: "50%", marginRight: "15px" }} />
                                                 <h6><i className="fa fa-check"></i> Thầy Giáo Ba</h6>
                                                 <div className="main-button">
-                                                    <a href="#">{t("follow")}</a>
+                                                    <a href="/src/Components/Game">{t("follow")}</a>
                                                 </div>
                                         </li>
                                         <li>
