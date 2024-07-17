@@ -1,5 +1,6 @@
 import { Toast } from 'primereact/toast';
 import {addRooming} from "../Reducers/RoomReducer";
+
 import React, {Component, useEffect, useState, useMemo, useRef} from "react";
     import {
         MeetingProvider,
@@ -13,6 +14,8 @@ import React, {Component, useEffect, useState, useMemo, useRef} from "react";
     import {authToken, createMeeting, fecthHlsDownsteamUrl} from "./../API";
     import ReactPlayer from "react-player";
     import {useDispatch, useSelector} from "react-redux";
+    import {useTranslation} from "react-i18next";
+
 
     function JoinScreen({ getMeetingAndToken }) {
         const [meetingId, setMeetingId] = useState(null);
@@ -301,6 +304,8 @@ function CopyButton() {
 
     }
 export default function Rooms() {
+    const {i18n} = useTranslation()
+    const {t} =useTranslation();
     const [joinedMeetingId, setJoinedMeetingId] = useState(null); // State để lưu meetingId đã tham gia
     const toast = useRef(null);
     const handleJoinMeeting = async (meetingId) => {
@@ -348,7 +353,7 @@ export default function Rooms() {
                 <div className="col-lg-3 col-sm-6" key={meeting.id}>
                     <div className="item">
                         <div className="thumb">
-                            <img src={require("./assets/images/stream-05.jpg")} alt=""/>
+                            <img src={require("./assets/images/live.jpg")} alt=""/>
                             <div className="hover-effect">
                                 <div className="content">
                                     <div className="live">
@@ -356,7 +361,7 @@ export default function Rooms() {
                                     </div>
                                     <ul>
                                         <li><a href="#"><i className="fa fa-eye"></i> 1.2K</a></li>
-                                        <li><a href="#"><i className="fa fa-gamepad"></i> CS-GO</a></li>
+                                        <li><a href="#"><i className="fa fa-gamepad"></i> LiveStream</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -366,8 +371,8 @@ export default function Rooms() {
                                 <img src={require("./assets/images/avatar-01.jpg")} alt=""
                                      style={{maxWidth: "46px", borderRadius: "50%", float: "left"}}/>
                             </div>
-                            <span><i className="fa fa-check"></i> Kengan Omeg</span>
-                            <h4>Phòng Game - Ngày Tạo: {new Date(meeting.date).toLocaleString()}</h4>
+                            <span><i className="fa fa-check"></i> </span>
+                            <h4> {t("room")} - {t("start")}  {new Date(meeting.date).toLocaleString()}</h4>
                             <button onClick={handleClick}>{meeting.id}</button>
                         </div>
                     </div>

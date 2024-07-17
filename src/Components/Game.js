@@ -8,6 +8,7 @@ import "react-range-slider-input/dist/style.css";
 
 import {useDispatch, useSelector} from "react-redux";
 import {filterByName, filterByPrice, filterByType, showAllProducts} from "../Reducers/ProductReducer";
+import {useTranslation} from "react-i18next";
 
 
 export default function Game() {
@@ -16,7 +17,8 @@ export default function Game() {
     const dispatch = useDispatch();
     const products = useSelector((state) => state.products);
     const [type, setType] = useState('');
-
+    const {i18n} = useTranslation()
+    const {t} =useTranslation();
 
     const handleInputChange = (event) => {
          setType(event.target.value);
@@ -71,7 +73,7 @@ export default function Game() {
                             <div className="most-popular">
                                 <div className="row">
                                     <div className="heading-section">
-                                        <h4><em>Chọn Trò Chơi Mong Muốn Của Bạn</em>!</h4>
+                                        <h4><em>{t("chosseGame")}</em>!</h4>
                                     </div>
                                     <div className="col-4">
                                         <div className="search-input2">
@@ -84,16 +86,16 @@ export default function Game() {
                                             </form>
                                         </div>
                                     </div>
-                                    <div className="col-2">
+                                    <div className="col-4">
                                         <div className="selectType">
                                             <select className="select-type2" value={selectedType}
                                                     onChange={handleTypeChange}>
-                                                <option value="showAll">Tất cả loại</option>
+                                                <option value="showAll">{t("allTypes")}</option>
                                                 <option value="Sandbox">Sandbox</option>
                                                 <option value="Steam-X">Steam-X</option>
                                                 <option value="3">Type 3</option>
                                             </select>
-                                            <i className="fa fa-caret-down"></i>
+                                            
                                         </div>
 
                                     </div>
@@ -116,7 +118,7 @@ export default function Game() {
                             </div>
                             <div className="most-popular">
                                 <div className="row">
-                                    <div className="col-lg-12">
+                                <div className="col-lg-12">
 
                                         <ListGame items={currentItems}/>
                                     </div>
