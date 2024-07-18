@@ -9,7 +9,6 @@ const cartSlice = createSlice({
     reducers: {
         addToCart: (state, action) => {
             const productIndex =  state.carts.findIndex((p) => p.id === action.payload.id)
-
             if(productIndex === -1) {
                 state.carts.push({ ...action.payload , quantity: 1 });
             }else {
@@ -46,9 +45,13 @@ const cartSlice = createSlice({
             state.totalPrice = state.carts.reduce((total, product) => {
                 return  total + product.price;
             }, 0);
-        }
-
+        },
+        deleteAllCart: (state) => {
+            state.carts = []; // Xóa mảng carts
+            state.totalPrice = 0; // Đặt totalPrice về 0
+        },
     }
+
 });
 const calculateTotalPrice = (carts) => {
     return carts.reduce((total, product) => {
@@ -56,5 +59,5 @@ const calculateTotalPrice = (carts) => {
     }, 0);
 };
 
-export const {addToCart, deleteToCart,decreaseToProduct,increaseToProduct,totalPriceAllProduct} = cartSlice.actions;
+export const {addToCart, deleteToCart,decreaseToProduct,increaseToProduct,totalPriceAllProduct,deleteAllCart} = cartSlice.actions;
 export default cartSlice.reducer;

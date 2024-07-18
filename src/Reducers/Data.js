@@ -1,6 +1,8 @@
+import {useTranslation} from "react-i18next";
 
 
 export const  productList = [
+
     {
         name:"Fortnite",
         type:"Sandbox",
@@ -42,6 +44,7 @@ export const  productList = [
         image4: "dota5.jpg",
         image5: "dota4.png",
         price: 48,
+        description:"Dota 2 là một trò chơi MOBA (Multiplayer Online Battle Arena) được phát triển và phát hành bởi Valve Corporation. Trò chơi được xây dựng trên nền tảng của trò chơi Warcraft III: Reign of Chaos và được coi là phiên bản tiếp theo của Dota (Defense of the Ancients), một custom map phổ biến của Warcraft III",
         bought: "2.3M"
     },
     {
@@ -55,6 +58,7 @@ export const  productList = [
         image4: "csgo5.jpg",
         image5: "csgo6.jpg",
         video: "https://www.youtube.com/watch?v=1nkO4N7P-Ys",
+        description: "Counter-Strike: Global Offensive có bản đồ, nhân vật và vũ khí mới bên cạnh những cập nhật của nội dung Counter-Strike cổ điển, giới thiệu các chế độ chơi game mới, bảng xếp hạng và nhiều hơn nữa.",
         price: 48,
         bought: "2.3M"
     },
@@ -69,6 +73,7 @@ export const  productList = [
         image4: "apex4.jpeg",
         image5: "apex6.jpg",
         video: "https://www.youtube.com/watch?v=NDQe4Xc6zeo",
+        description:"Apex Legends là một trò chơi bắn súng anh hùng miễn phí được phát triển bởi Respawn Entertainment. Trong trò chơi này, người chơi có thể chọn từ một danh sách các nhân vật huyền thoại. Mỗi nhân vật đều có tính cách, sức mạnh và khả năng riêng biệt. Người chơi phải thể hiện kỹ năng của mình trong việc sử dụng một loạt các vũ khí với khả năng đặc biệt trong mọi chiến trường.",
         price: 48,
         bought: "2.3M"
     },
@@ -84,6 +89,7 @@ export const  productList = [
         image5: "wt6.jpg",
         video: "https://www.youtube.com/watch?v=0-J5Vg0SxLc",
         price: 49,
+        description:"War Thunder là game không chiến miễn phí với bối cảnh Thế chiến 2. War Thunder PC có cơ chế chiến đấu đa dạng, những màn giao đấu căng thẳng tới nghẹt thở trên bầu trời.",
         bought: "2.3M"
     },
     {
@@ -97,11 +103,12 @@ export const  productList = [
         image4: "gta4.jpg",
         image5: "gta5.jpg",
         video: "https://www.youtube.com/watch?v=hvoD7ehZPcM",
+        description:"GTA 5 hay Grand Theft Auto V là phiên bản game cướp đường phố dành cho những kẻ mộng mơ trải nghiệm cuộc sống ở nước Mỹ.",
         price: 52,
         bought: "2.3M"
     },
     {
-        name:"Dota7",
+        name:"Getting Over It",
         type:"Steam-X",
         id: 11,
         image: "got1.jpg",
@@ -111,6 +118,7 @@ export const  productList = [
         image4: "got4.jpg",
         image5: "got5.jpg",
         video:"https://www.youtube.com/watch?v=cCL6tWv_7FM",
+        description:"Trong game hành động siêu vui và hài hước Getting Over It, bạn sẽ vào vai một anh chàng bị nhốt trong chiếc chum và phải dùng chiếc búa tạ để leo qua các ngọn núi càng xa càng tốt.",
         price: 39,
         bought: "2.3M"
     },
@@ -125,6 +133,7 @@ export const  productList = [
         image4: "btf6.jpg",
         image5: "btf5.jpg",
         video:"https://www.youtube.com/watch?v=ASzOzrB-a9E",
+        description:"Battlefield 2042 là phần game mới nhất trong dòng game bắn súng Battlefield của EA và DICE. Được cộng đồng game thủ trên toàn thế giới hy vọng sẽ là một tựa game bắn súng đỉnh cao, vượt qua Call of Duty năm nay.",
         price: 36,
         bought: "2.3M"
     },
@@ -140,6 +149,7 @@ export const  productList = [
         image4: "mc5.jpg",
         image5: "mc6.jpg",
         video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
+        description:"Minecraft là game phiêu lưu sinh tồn trong thế giới mở - với tên gọi quen thuộc là Những khối vuông kỳ diệu. Đến với Minecraft PC, bạn sẽ thỏa sức khám phá thế giới theo trí tưởng tượng và sự sáng tạo của mình!",
         price: 10,
         bought: "2.3M"
     },
@@ -154,6 +164,7 @@ export const  productList = [
         image4: "duck5.jpg",
         image5: "duck6.jpg",
         video: "https://www.youtube.com/watch?v=bHrHDenJlG8",
+        description:"Goose Goose Duck là một trò chơi suy luận xã hội tìm kẻ mạo danh, nơi bạn và những chú Ngỗng đồng loại của mình phải làm việc cùng nhau để hoàn thành nhiệm vụ. Bên cạnh đó, mọi người cũng phải để mắt tới những con Vịt trời hung ác và nhiều loài chim khác đã xâm nhập và sẽ làm bất cứ điều gì để ngăn cản bầy của mình.",
         price: 70,
         bought: "1M"
     },
@@ -169,6 +180,7 @@ export const  productList = [
         image4: "lol3.jpg",
         image5: "lol4.jpg",
         video: "https://www.youtube.com/watch?v=sjrmI2QbPig",
+        description:"Liên Minh Huyền Thoại (LMHT) hay còn được biết đến với tên gọi League of Legends (LOL) là tựa game MOBA trực tuyến có lượng người chơi đông đảo nhất hiện nay. Game được phát hành tại Việt Nam bởi Garena và đang là bộ môn thể thao điện tử phát triển mạnh mẽ, nhận được sự quan tâm của cộng đồng game thủ trên toàn thế giới.",
         bought: "5M"
     },
     {
@@ -182,6 +194,7 @@ export const  productList = [
         image4: "fc5.jpg",
         image5: "fc2.jpg",
         video: "https://www.youtube.com/watch?v=0Y5vQ2KIFZ8",
+        description:"Bạn là một người đam mê bóng đá? Bạn mong muốn sở hữu cho mình 1 đội hình với sự có mặt của các cầu thủ siêu sao trên khắp thế giới? Với FC Online, bạn sẽ được thỏa thích tạo đội bóng trong mơ của mình và đối đầu với những huấn luyện viên khác bằng phong cách tư duy chiến thuật cá nhân trong mỗi trận đấu.",
         price: 60,
         bought: "5.3M"
     },
@@ -196,6 +209,7 @@ export const  productList = [
         image4: "tft4.jpg",
         image5: "tft2.jpg",
         video: "https://www.youtube.com/watch?v=FZ0QPjCs0D4",
+        description:"Hãy sử dụng 100% bộ não để chọn tướng, sắp xếp vị trí cho họ và giành chiến thắng trong cuộc đấu 1 chọi tất cả gồm 8 đấu thủ. Với hàng trăm sự kết hợp đội hình và xu hướng chơi không ngừng thay đổi, mọi loại chiến thuật đều có thể được áp dụng. Nhưng tất nhiên, sẽ luôn luôn chỉ có 1 người thắng cuộc.",
         price: 30,
         bought: "5.3M"
     },
@@ -205,7 +219,15 @@ export const  productList = [
         type: "Steam-X",
         id: 16,
         image: "the50.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 57,
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
         bought: "5.3M"
     },
     {
@@ -213,7 +235,15 @@ export const  productList = [
         type: "Steam-X",
         id: 21,
         image: "man.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 90,
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
         bought: "5M"
     },
 
@@ -222,7 +252,15 @@ export const  productList = [
         type: "Steam-X",
         id: 26,
         image: "minicrapt.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 97,
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
         bought: "4M"
     },
     {
@@ -230,7 +268,15 @@ export const  productList = [
         type: "Steam-X",
         id: 27,
         image: "batman.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 96,
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
         bought: "4.4M"
     },
     {
@@ -238,7 +284,15 @@ export const  productList = [
         type: "Steam-X",
         id: 28,
         image: "wukong.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 90,
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
         bought: "5M"
     },
     {
@@ -246,7 +300,15 @@ export const  productList = [
         type: "Steam-X",
         id: 29,
         image: "the50.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 91,
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
         bought: "3.2M"
     },
     {
@@ -254,6 +316,14 @@ export const  productList = [
         type: "Steam-X",
         id: 30,
         image: "drogon.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 92,
         bought: "3.5M"
     },
@@ -262,6 +332,14 @@ export const  productList = [
         type: "Steam-X",
         id: 32,
         image: "battle.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 90,
         bought: "5.3M"
     },
@@ -270,6 +348,14 @@ export const  productList = [
         type: "Steam-X",
         id: 33,
         image: "battle3.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 94,
         bought: "5M"
     },
@@ -278,6 +364,14 @@ export const  productList = [
         type: "Steam-X",
         id: 34,
         image: "anthem.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 96,
         bought: "4M"
     },
@@ -286,6 +380,14 @@ export const  productList = [
         type: "Steam-X",
         id: 35,
         image: "fc7.jpg",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 97,
         bought: "4.4M"
     },
@@ -294,6 +396,14 @@ export const  productList = [
         type: "Steam-X",
         id: 36,
         image: "battle1.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price:89,
         bought: "10M"
     },
@@ -302,6 +412,14 @@ export const  productList = [
         type: "Steam-X",
         id: 38,
         image: "fifa.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 79,
         bought: "4.4M"
     },
@@ -310,6 +428,14 @@ export const  productList = [
         type: "Steam-X",
         id: 39,
         image: "sims4.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 95,
         bought: "2.3M"
     },
@@ -318,6 +444,14 @@ export const  productList = [
         type: "Steam-X",
         id: 40,
         image: "blizass4.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 50,
         bought: "3.2M"
     },
@@ -326,6 +460,14 @@ export const  productList = [
         type: "Steam-X",
         id: 41,
         image: "blizass50.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 92,
         bought: "3.5M"
     },
@@ -334,6 +476,14 @@ export const  productList = [
         type: "Steam-X",
         id: 42,
         image: "diablo.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 93,
         bought: "10M"
     },
@@ -342,6 +492,14 @@ export const  productList = [
         type: "Steam-X",
         id: 43,
         image: "diablolimit.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 99,
         bought: "2.3M"
     },
@@ -350,6 +508,14 @@ export const  productList = [
         type: "Steam-X",
         id: 45,
         image: "mafia.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 92,
         bought: "3.5M"
     },
@@ -358,6 +524,14 @@ export const  productList = [
         type: "Steam-X",
         id: 46,
         image: "vanguage.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 90,
         bought: "5.3M"
     },
@@ -366,6 +540,14 @@ export const  productList = [
         type: "Steam-X",
         id: 47,
         image: "ghost.png",
+        image1: "pubg1.jpg",
+        image2: "pubg2.jpg",
+        image3: "pubg3.jpg",
+        image4: "pubg4.jpg",
+        image5: "pubg5.jpg",
+        video: "https://www.youtube.com/watch?v=Rla3FUlxJdE",
+        description: "Hạ cánh trên các địa điểm chiến lược, cướp vũ khí và vật tư, và sống sót để trở thành đội cuối cùng đứng trên các Chiến trường đa dạng, phong phú.\n" +
+            "Lập đội và tham gia Battlegrounds để có trải nghiệm Battle Royale nguyên bản mà chỉ PUBG: BATTLEGROUNDS mới có thể cung cấp.",
         price: 91,
         bought: "4.4M"
     }

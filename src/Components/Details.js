@@ -1,12 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import 'font-awesome/css/font-awesome.min.css';
 import Header from "./Header";
 import Footer from "./Footer";
 import {Link, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {addToCart} from "../Reducers/CartReducer";
+import {useTranslation} from "react-i18next";
 
 export default function Details(){
+
+    const {i18n} = useTranslation()
+    const {t} =useTranslation();
     const {id} = useParams();
     console.log(id);
     const dispatch = useDispatch();
@@ -44,7 +48,7 @@ export default function Details(){
                         <div className="game-details">
                             <div className="row">
                                 <div className="col-lg-12">
-                                    <h2>{product.name} Details</h2>
+                                    <h2>{product.name} {t("details")}</h2>
                                 </div>
                                 <div className="col-lg-12">
                                     <div className="content">
@@ -157,7 +161,7 @@ export default function Details(){
                                 <div className="col-lg-6">
                                     <div className="item">
                                         <img src={require("./assets/images/got1.jpg")} alt="" className="templatemo-item" />
-                                            <h4>getting Over It</h4><span>Sandbox</span>
+                                            <h4>Getting Over It</h4><span>Sandbox</span>
                                             <ul>
                                                 <li><i className="fa fa-star"></i> 4.8</li>
                                                 <li><i className="fa fa-download"></i> 2.3M</li>

@@ -1,10 +1,14 @@
-
 import "./assets/css/paymentsuccess.css"
 import {Link, useLocation} from "react-router-dom";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {useEffect} from "react";
+import {deleteAllCart} from "../Reducers/CartReducer";
 export default function PaymentSuccess(){
     const user111 = useSelector((state) => state.auth.user);
-
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(deleteAllCart());
+    }, []);
     return (
         <div className="container-son">
             <div className="success-icon">
