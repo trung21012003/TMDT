@@ -109,13 +109,13 @@ function ParticipantView(props) {
 
         return (
             <div style={{
-                height: "150px",
+                height: "300px",
                 background: "#1f2122",
                 display: "flex",
             }}>
 
 
-                <p style={{marginTop:"20px"}}>
+                <p style={{marginTop:"20px" ,width: "440px"}}>
                     Người Tham Gia: {displayName} | Camera: {webcamOn ? "ON" : "OFF"} | Mic:{" "}
                     {micOn ? "ON" : "OFF"}
                 </p>
@@ -392,12 +392,12 @@ export default function Rooms() {
             <div>
                 <Toast ref={toast}/>
             </div>
-            <h3>Các Phòng Game Hiện Tại:</h3>
+
             {meetings.map((meeting) => (
                 <div className="col-lg-3 col-sm-6" key={meeting.id}>
                     <div className="item">
                         <div className="thumb">
-                            <img src={require("./assets/images/live.jpg")} alt="" />
+                            <img src={require("./assets/images/meet.jpg")} alt="" />
                             <div className="hover-effect">
                                 <div className="content">
                                     <div className="live">
@@ -427,7 +427,6 @@ export default function Rooms() {
                     isHost ? <MeetingContainer addMeeting={addMeeting}/> : <HLSContainer/>
                 }
             </div>
-
         </>
     )
 }
