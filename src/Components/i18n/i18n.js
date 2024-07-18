@@ -1,6 +1,6 @@
 
 import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+import {initReactI18next, useTranslation} from "react-i18next";
 
 const resources = {
     en: {
@@ -64,6 +64,11 @@ const resources = {
             checkoutsuccess:"After a successful payment, you will receive a link for your game",
             product:"PRODUCTS",
             registernow:"Please register an account here",
+            relax:"Relax Room",
+            foot:"Get connected with us on social networks:",
+            university: "Nong Lam University, Vietnam",
+            foot1:" Providing the world's leading online gaming experience.",
+
         }
     },
     vi: {
@@ -127,6 +132,10 @@ const resources = {
             checkoutsuccess:"Sau Khi Thanh Toán Thành Công Bạn Sẽ Nhận Được Link Dành Cho Game Của Bạn",
             product:"SẢN PHẨM",
             registernow:"Vui lòng đăng kí tài khoản Tại Đây",
+            relax:"Phòng Giải Trí",
+            foot:"Hãy kết nối với chúng tôi trên các mạng xã hội:",
+            university: "Đại Học Nông Lâm, Việt Nam",
+            foot1:" Cung cấp trải nghiệm trờ chơi trực tuyến hàng đầu thế giới."
 
 
         }

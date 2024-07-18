@@ -1,13 +1,18 @@
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import React from "react";
+import {useTranslation} from "react-i18next";
 export default function Footer() {
+    const {i18n} = useTranslation()
+    const {t} =useTranslation();
+    const location = useLocation();
+    const currentPath = location.pathname;
     return (
 
         <footer className="text-center text-lg-start text-muted">
             <section className="d-flex justify-content-center justify-content-lg-between p-1 border-bottom">
                 <div className="me-5 d-none d-lg-block" style={{color:"white"}}>
-                    <span>Get connected with us on social networks:</span>
+                    <span>{t("foot")}</span>
                 </div>
                 <div>
                     <Link to="" className="me-4 text-reset">
@@ -38,24 +43,24 @@ export default function Footer() {
                                 <i className="fa fa-gem me-3"></i>T-Gaming
                             </h6>
                             <p>
-                               Bán Game Cho Người Nghèo Thích Chơi Game Mắc Tiền
+                                {t("foot1")}
                             </p>
                         </div>
                         <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-2">
                             <h6 className="text-uppercase fw-bold mb-4">
-                                Products
+                                Contributors
                             </h6>
                             <p style={{marginLeft:"-100px",marginBottom:"1px",marginTop:"1px"}}>
-                                <Link  className="text-reset">Angular</Link>
+                                <Link  className="text-reset">Phan The Thinh</Link>
                             </p>
                             <p style={{marginLeft:"-100px",marginBottom:"1px",marginTop:"1px"}}>
-                                <Link  className="text-reset">React</Link>
+                                <Link  className="text-reset">Tran Quoc Trung</Link>
                             </p>
                             <p style={{marginLeft:"-100px",marginBottom:"1px",marginTop:"1px"}}>
-                                <Link className="text-reset">Vue</Link>
+                                <Link className="text-reset">Nguyen Tran Phuc Thanh</Link>
                             </p>
                             <p style={{marginLeft:"-100px",marginBottom:"1px",marginTop:"1px"}}>
-                                <Link  className="text-reset">Laravel</Link>
+                                <Link  className="text-reset">Lap trinh Front End</Link>
                             </p>
                         </div>
                         <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -64,16 +69,16 @@ export default function Footer() {
                                 Useful links
                             </h6>
                             <p style={{marginLeft:"-100px",marginBottom:"1px"}}>
-                                <Link className="text-reset">Pricing</Link>
+                                <Link to="/" className={currentPath === '/' ? 'active' : ''}>{t("home")}</Link>
                             </p>
                             <p style={{marginLeft:"-100px",marginBottom:"1px",marginTop:"1px"}}>
-                                <Link  className="text-reset">Settings</Link>
+                                <Link to="/browse" className={currentPath === '/browse' ? 'active' : ''}>{t("browser")}</Link>
                             </p>
                             <p style={{marginLeft:"-100px",marginBottom:"1px",marginTop:"1px"}}>
-                                <Link  className="text-reset">Orders</Link>
+                                <Link to="/streams" className={currentPath === '/streams' ? 'active' : ''}>{t("stream")}</Link>
                             </p>
                             <p style={{marginLeft:"-100px",marginBottom:"1px",marginTop:"1px"}}>
-                                <Link  className="text-reset">Help</Link>
+                                <Link to="/games" className={currentPath === '/games' ? 'active' : ''}>{t("game")}</Link>
                             </p>
                         </div>
 
@@ -81,17 +86,17 @@ export default function Footer() {
 
                             <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
                             <p style={{marginLeft:"-90px",marginBottom:"1px",marginTop:"1px"}}>
-                                <i className="fa fa-home me-3"></i> New York, NY 10012, US
+                                <i className="fa fa-home me-3"></i> {t("university")}
                             </p>
                             <p style={{marginLeft:"-100px",marginBottom:"1px",marginTop:"1px"}}>
                                 <i className="fa fa-envelope me-3"></i>
-                                info@example.com
+                                t-gaming@gmail.com
                             </p>
                             <p style={{marginLeft:"-130px",marginBottom:"1px",marginTop:"1px"}}>
-                                <i className="fa fa-phone me-3"></i> + 01 234 567 88
+                                <i className="fa fa-phone me-3"></i> +84 843 281 139
                             </p>
                             <p style={{marginLeft:"-130px",marginBottom:"1px",marginTop:"1px"}}>
-                                <i className="fa fa-print me-3"></i> + 01 234 567 89
+                                <i className="fa fa-print me-3"></i> 1900 6789
                             </p>
                         </div>
                     </div>

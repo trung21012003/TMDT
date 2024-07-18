@@ -233,7 +233,7 @@ export default function LiveStream(){
             <div className="live-stream">
                 <div className="col-lg-12">
                     <div className="heading-section">
-                        <h4><em>Chơi Game Cùng Nhau</em></h4>
+                        <h4>{t("relax")}</h4>
                     </div>
                     <div className="row">
                         <Rooms/>
