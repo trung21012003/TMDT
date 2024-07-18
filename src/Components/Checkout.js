@@ -88,7 +88,7 @@ export default function Checkout() {
                                 </div>
                                 <p style={{color: "red"}}>{error}</p>
                                 <div className="checkout__input__checkbox">
-                                    <Link to="/l">{t("registernow")}</Link>
+                                    <Link to="/signUp">{t("registernow")}</Link>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6">
