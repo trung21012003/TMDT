@@ -135,7 +135,7 @@ const resources = {
             relax:"Phòng Giải Trí",
             foot:"Hãy kết nối với chúng tôi trên các mạng xã hội:",
             university: "Đại Học Nông Lâm, Việt Nam",
-            foot1:" Cung cấp trải nghiệm trờ chơi trực tuyến hàng đầu thế giới."
+            foot1:" Cung cấp trải nghiệm trò chơi trực tuyến hàng đầu thế giới."
 
 
         }

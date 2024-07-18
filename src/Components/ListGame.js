@@ -14,7 +14,7 @@ export default function ListGame({ items }) {
     const {i18n} = useTranslation()
     const {t} =useTranslation();
     const showSuccess = () => {
-        toast.current.show({severity:'success', summary: 'Success', detail:'Thêm Vào Giỏ Hàng Thành Công', life: 1000});
+        toast.current.show({severity:'success', summary: 'Success', detail:'Thêm Vào Giỏ Hàng Thành Công', life: 2000});
     }
     return (
 
@@ -34,7 +34,7 @@ export default function ListGame({ items }) {
                         </ul>
                         <div className="row">
                             <div className="col-sm-6  d-flex justify-content-start">
-                                <Link className="btn btn-link" to={`/details/${product.id}`} >{t("details")}</Link>
+                               <h4> <Link className="" to={`/details/${product.id}`} >{t("details")}</Link></h4>
                             </div>
                             <div className="col-sm-6  d-flex justify-content-end">
                                 <button label="Success" severity="success" onClick={() => {

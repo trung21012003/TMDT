@@ -97,7 +97,7 @@ export default function Checkout() {
                                     <div className="checkout__order__products">{t("product")} <span>{t("totalPrice")}</span></div>
                                     <ul>
                                         {Carts.map((product) => (
-                                            <li key={product.id}> {product.name} <span>$ {product.price}</span></li>
+                                            <li key={product.id}> {product.name} <span>$ {product.price}</span></li> 
                                         ))}
                                     </ul>
                                     <p>{t("checkoutsuccess")}</p>
