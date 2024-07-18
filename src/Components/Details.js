@@ -56,7 +56,7 @@ export default function Details(){
                                                         <span>{product.type}</span>
                                                     </div>
                                                     <ul>
-                                                        <li><i className="fa fa-star"></i> 4.8</li>
+                                                        <li><i className="fa fa-star"></i> {product.price} $</li>
                                                         <li><i className="fa fa-download"></i> 2.3M</li>
                                                     </ul>
                                                 </div>

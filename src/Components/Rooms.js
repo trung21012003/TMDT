@@ -109,13 +109,13 @@ function ParticipantView(props) {
 
         return (
             <div style={{
-                height: "380px",
+                height: "150px",
                 background: "#1f2122",
                 display: "flex",
             }}>
 
 
-                <p>
+                <p style={{marginTop:"20px"}}>
                     Người Tham Gia: {displayName} | Camera: {webcamOn ? "ON" : "OFF"} | Mic:{" "}
                     {micOn ? "ON" : "OFF"}
                 </p>
@@ -146,13 +146,11 @@ function ParticipantView(props) {
     function Controls() {
         const { leave, toggleMic, toggleWebcam, toggleScreenShare,  enableScreenShare} = useMeeting();
         return (
-            <div>
+            <div style={{marginTop:"20px"}}>
                 <button style={{marginLeft: "5px"}} onClick={() => leave()}>Rời Khỏi Phòng</button>
-
-                <button style={{marginLeft: "5px"}} onClick={() => toggleMic()}>Tắt/Bật Mic</button>
-                <button  style={{marginLeft: "5px"}} onClick={() => toggleWebcam()}>Tắt/Bật Camera</button>
-                <button style={{marginLeft: "5px"}} onClick={() => toggleScreenShare()}>Tắt/Bật Chia Sẽ Màn Hình</button>
-                
+                <button style={{marginLeft: "10px"}} onClick={() => toggleMic()}>Tắt/Bật Mic</button>
+                <button  style={{marginLeft: "10px"}} onClick={() => toggleWebcam()}>Tắt/Bật Camera</button>
+                <button style={{marginLeft: "10px"}} onClick={() => toggleScreenShare()}>Tắt/Bật Chia Sẽ Màn Hình</button>
             </div>
         );
     }
@@ -257,9 +255,9 @@ function CopyButton() {
                         ))}
                     </div>
                 ) : (
-                    <div>
+                    <div style={{marginTop:"20px"}}>
                     <button onClick={join}>Tham Gia Ngay</button>
-                    <button onClick={() => window.location.reload()}>Hủy</button>
+                    <button onClick={() => window.location.reload()} style={{marginLeft:"20px"}}>Hủy</button>
                     </div>
         )
     }
@@ -399,7 +397,7 @@ export default function Rooms() {
                 <div className="col-lg-3 col-sm-6" key={meeting.id}>
                     <div className="item">
                         <div className="thumb">
-                            <img src={require("./assets/images/live.jpg")} alt=""/>
+                            <img src={require("./assets/images/live.jpg")} alt="" />
                             <div className="hover-effect">
                                 <div className="content">
                                     <div className="live">
@@ -419,7 +417,7 @@ export default function Rooms() {
                             </div>
                             <span><i className="fa fa-check"></i> </span>
                             <h4> {t("room")} - {t("start")}  {new Date(meeting.date).toLocaleString()}</h4>
-                            <button onClick={handleClick}>{meeting.id}</button>
+                            <button onClick={handleClick} style={{marginTop:"20px",marginLeft:"50px"}}>{meeting.id}</button>
                         </div>
                     </div>
                 </div>
