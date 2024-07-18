@@ -46,7 +46,7 @@ export default function Login() {
 
                 <div style={{display: "flex", justifyContent: "center"}}>
                     <Link to="/login" className="active">
-                        <h2 type="text" className="">{t("LOGIN")}  </h2>
+                        <h2 type="text" className="">{t("login")}  </h2>
                     </Link>
 
 
@@ -76,16 +76,16 @@ export default function Login() {
                     <div style={{display: "flex", justifyContent: "center"}}>
                         <button type="submit" style={{backgroundColor: "#e75e8d"}}
                                 className="btn btn-outline-dark ">{t("login")} </button>
-                        <Link to="/forgotpassword" className="active">
-                            <h6 style={{marginLeft: "30px", marginTop: "10px", width: "150px"}} type="button"
-                                className="">Quên mật khẩu
-                            </h6>
+                        <Link to="/" className="active">
+                            <button style={{marginLeft: "70px", marginTop: "5px", width: "110px"}} type="button"
+                                    className="btn btn-outline-light">{t("home")}
+                            </button>
                         </Link>
                     </div>
                 </form>
             </div>
             <div style={{display: "flex",justifyContent: "space-between" , margin:"20px 15px" }}>
-            <h6 style={{justifyContent :"center"}} > Bạn Chưa Có Tài Khoản  ?</h6> <h6><Link to="/signup" className="active"> {t("register")} Ngay</Link></h6>
+            <h6 style={{justifyContent :"center"}} > {t("account")}</h6> <h6><Link to="/signup" className="active"> {t("register")} {t("now")}</Link></h6>
             </div>
         </div>
     )

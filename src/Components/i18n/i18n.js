@@ -54,6 +54,16 @@ const resources = {
             start:"Begin at:",
             price:"PRICE",
             valid:"Invalid email address",
+            account:"Do not have an account ?",
+            now:"now",
+            bill:"Bill",
+            checkout:"Go to checkout",
+            totalPrice:"Total Price",
+            CHECKOUT:"CHECKOUT",
+            yourOrder:"YOUR ORDER",
+            checkoutsuccess:"After a successful payment, you will receive a link for your game",
+            product:"PRODUCTS",
+            registernow:"Please register an account here",
         }
     },
     vi: {
@@ -107,6 +117,18 @@ const resources = {
             start:"Tạo lúc:",
             price:"Giá tiền",
             valid:"E-mail bạn cung cấp không hợp lệ",
+            account:"Bạn chưa có tài khoản ?",
+            now:"ngay",
+            bill:"Hóa Đơn",
+            checkout:"Thanh toán hóa đơn",
+            totalPrice:"Tổng tiền",
+            CHECKOUT:"THANH TOÁN",
+            yourOrder:"ĐƠN CỦA BẠN",
+            checkoutsuccess:"Sau Khi Thanh Toán Thành Công Bạn Sẽ Nhận Được Link Dành Cho Game Của Bạn",
+            product:"SẢN PHẨM",
+            registernow:"Vui lòng đăng kí tài khoản Tại Đây",
+
+
         }
     }
 };

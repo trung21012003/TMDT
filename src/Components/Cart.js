@@ -7,12 +7,15 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import {useSelector, useDispatch} from "react-redux";
 import {Link} from "react-router-dom";
 import { deleteToCart} from "../Reducers/CartReducer";
+import {useTranslation} from "react-i18next";
 
 export default function Cart(){
     const Carts = useSelector(state => state.cart.carts);
     console.log(Carts);
     const dispatch = useDispatch();
     const totalPrice =useSelector(state => state.cart.totalPrice);
+    const {i18n} = useTranslation();
+    const {t} =useTranslation();
     console.log(totalPrice);
     return (
         <div className="container">
@@ -79,19 +82,19 @@ export default function Cart(){
                         <div className="col-md-4">
                             <div className="card mb-4">
                                 <div className="card-header py-3">
-                                    <h5 style={{color :"black"}} className="mb-0">Summary</h5>
+                                    <h5 style={{color :"black"}} className="mb-0">{t("bill")}</h5>
                                 </div>
                                 <div className="card-body">
                                     <ul className="list-group list-group-flush">
                                         <li
                                             className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                                            Trò Chơi
+                                            {t("game")}
                                             <span>${totalPrice}</span>
                                         </li>
                                         <li
                                             className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
                                             <div>
-                                                <strong>Tổng Tiền</strong>
+                                                <strong>{t("totalPrice")}</strong>
                                                 <strong>
                                                     <p className="mb-0">(Thuế VAT)</p>
                                                 </strong>
@@ -105,7 +108,7 @@ export default function Cart(){
                                                 type="button"
                                                 to="/checkout"
                                             >
-                                                Go to checkout
+                                                {t("checkout")}
                                             </Link>
                                         </button>
 

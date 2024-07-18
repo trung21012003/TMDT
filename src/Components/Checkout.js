@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import {useEffect, useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
 import BtnCheckOut from "./BtnCheckOut";
+import {useTranslation} from "react-i18next";
 export default function Checkout() {
     const Carts = useSelector(state => state.cart.carts);
     const totalPrice =useSelector(state => state.cart.totalPrice);
@@ -21,6 +22,8 @@ export default function Checkout() {
     const [error, setError] = useState('');
     const navigate = useNavigate();
     const link = 'https://drive.google.com/file/d/1NyyEjctCj9_YAA3ahRrORYoRVb3XZi6c/view';
+    const {i18n} = useTranslation()
+    const {t} =useTranslation();
     useEffect(() => {
         if (isLoggedIn) {
             setEmail(user111.user.email);
@@ -45,7 +48,7 @@ export default function Checkout() {
             <Header />
             <div className="container">
                 <div className="checkout__form">
-                    <h4 style={{textAlign: "center"}}>THANH TOÁN</h4>
+                    <h4 style={{textAlign: "center"}}>{t("CHECKOUT")}</h4>
                     <form onSubmit={handleSubmit}>
                         <div className="row">
                             <div className="col-lg-8 col-md-6">
@@ -85,21 +88,19 @@ export default function Checkout() {
                                 </div>
                                 <p style={{color: "red"}}>{error}</p>
                                 <div className="checkout__input__checkbox">
-                                    <Link to="/signUp">Bạn Chưa Có Tài Khoản ?</Link>
+                                    <Link to="/signUp">{t("registernow")}</Link>
                                 </div>
-                                <p>Create an account by entering the information below. If you are a returning customer
-                                    please login at the top of the page</p>
                             </div>
                             <div className="col-lg-4 col-md-6">
                                 <div className="checkout__order">
-                                    <h4>ĐƠN CỦA BẠN</h4>
-                                    <div className="checkout__order__products">Products <span>Total</span></div>
+                                    <h4>{t("yourOrder")}</h4>
+                                    <div className="checkout__order__products">{t("product")} <span>{t("totalPrice")}</span></div>
                                     <ul>
                                         {Carts.map((product) => (
                                             <li key={product.id}> {product.name} <span>$ {product.price}</span></li>
                                         ))}
                                     </ul>
-                                    <p>Sau Khi Thanh Toán Thành Công Bạn Sẽ Nhận Được Link Dành Cho Game Của Bạn</p>
+                                    <p>{t("checkoutsuccess")}</p>
                                     <BtnCheckOut />
 
                                 </div>
